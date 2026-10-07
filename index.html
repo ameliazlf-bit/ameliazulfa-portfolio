@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#101518">
+	<meta name="description" content="Portofolio Amelia Zulfa, web developer yang berfokus pada pengembangan aplikasi web.">
+	<title>Amelia Zulfa | Portofolio Web Developer</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+	<script>document.documentElement.classList.add("js");</script>
+	<style>
+		:root {
+			color-scheme: dark;
+			--night: #101518; --surface: #1a2024; --surface-raised: #252d31;
+			--ink: #eef4f5; --muted: #a8b6bd; --line: #35434a;
+			--ice: #8fcde8; --ice-bright: #c4eaf8; --snow: #edf5f7;
+			--winter-snow: #d7e8f0; --winter-snow-bright: #f5fbff; --winter-shadow: #8ba7b5;
+			--winter-pine: #315566; --winter-pine-light: #648b98; --winter-wood: #805b47; --winter-window: #f5d58d;
+			--rain-road: #253943; --rain-road-edge: #526b74; --rain-light: #f5d58d; --rain-person: #22313a;
+			--header-bg: #101518ed; --section-bg: #171d21;
+			--portrait-start: #1c272d; --portrait-end: #232a2d;
+			--portrait-label: #d0d5dc; --portrait-hint: #d1d5dc; --portrait-frame: #ffffff2b;
+			--callout-bg: #8fcde80d; --certificate-bg: #1b2227;
+			--button-text: #121a20; --toggle-bg: #1a2024;
+			--grid-a: #edf5f708; --grid-b: #8fcde808;
+			--hero-gradient: linear-gradient(110deg, #f2f7f8, #c4eaf8 48%, #8fcde8);
+			--button-gradient: linear-gradient(115deg, #8fcde8, #b8d8e4 52%, #d8e8ed);
+			--portrait-gradient: linear-gradient(145deg, #1c272d, #26353b 56%, #242a37);
+			--project-gradient: linear-gradient(125deg, #23323a, #2b3b42 55%, #202a30);
+			--project-alt-gradient: linear-gradient(125deg, #293239, #39434a 55%, #20282c);
+			--progress-gradient: linear-gradient(90deg, #8fcde8, #edf5f7 55%, #c4eaf8);
+			--ticker-gradient: linear-gradient(90deg, #202a30, #252d31 48%, #202a30);
+			--mono: "Fira Code", monospace; --sans: "Plus Jakarta Sans", sans-serif;
+		}
+		:root[data-theme="light"] {
+			color-scheme: light;
+			--night: #eff4f6; --surface: #fff; --surface-raised: #e4edf1;
+			--ink: #17252c; --muted: #566871; --line: #c8d5db;
+			--ice: #4a91af; --ice-bright: #3c809b; --snow: #52717e;
+			--winter-snow: #d5e6ee; --winter-snow-bright: #f8fcff; --winter-shadow: #86a3b1;
+			--winter-pine: #315566; --winter-pine-light: #648b98; --winter-wood: #805b47; --winter-window: #f5d58d;
+			--rain-road: #253943; --rain-road-edge: #526b74; --rain-light: #f5d58d; --rain-person: #22313a;
+			--header-bg: #eff4f6ed; --section-bg: #e7eef1;
+			--portrait-start: #d9e8ed; --portrait-end: #e7edf0;
+			--portrait-label: #334953; --portrait-hint: #425962; --portrait-frame: #17252c35;
+			--callout-bg: #4a91af12; --certificate-bg: #e7eef1;
+			--button-text: #f8fbfc; --toggle-bg: #fff;
+			--grid-a: #526c780a; --grid-b: #4a91af0a;
+			--hero-gradient: linear-gradient(110deg, #304d5c, #4a91af 52%, #85aeba);
+			--button-gradient: linear-gradient(115deg, #407c98, #5a91a8 55%, #719eaa);
+			--portrait-gradient: linear-gradient(145deg, #d2e6eb, #e8eef0 55%, #d5dde8);
+			--project-gradient: linear-gradient(125deg, #c9dfe6, #dce8eb 55%, #c4d8e0);
+			--project-alt-gradient: linear-gradient(125deg, #d5e2e7, #e5e9e8 55%, #d6e1e3);
+			--progress-gradient: linear-gradient(90deg, #407c98, #719eaa 55%, #b1ccd4);
+			--ticker-gradient: linear-gradient(90deg, #dce8eb, #e4edf0 48%, #dce8eb);
+		}
+		:root[data-theme="spring"] {
+			color-scheme: light;
+			--night: #f6f3eb; --surface: #fffdf8; --surface-raised: #ebe7dc;
+			--ink: #25272b; --muted: #686a6a; --line: #d9d4c8;
+			--ice: #798ab7; --ice-bright: #6577a6; --snow: #73694f;
+			--header-bg: #f6f3ebed; --section-bg: #eeeadf;
+			--portrait-start: #e4e7f0; --portrait-end: #f2eadb;
+			--portrait-label: #37404d; --portrait-hint: #515a65; --portrait-frame: #25272b35;
+			--callout-bg: #798ab718; --certificate-bg: #eee9de;
+			--button-text: #fff; --toggle-bg: #fffdf8;
+			--grid-a: #73694f0b; --grid-b: #798ab70b;
+			--blossom: #798ab7; --spring-gold: #c59b52; --leaf-orange: #c87936;
+			--spring-grass: #77976d; --spring-leaf: #668c67; --spring-trunk: #8b694e;
+			--hero-gradient: linear-gradient(110deg, #4d638f, #788ab6 54%, #a96b3e);
+			--button-gradient: linear-gradient(115deg, #5b729f, #7c80a5 54%, #b47c4e);
+			--portrait-gradient: linear-gradient(145deg, #dce3ee, #f2eadb 58%, #e4d6bf);
+			--project-gradient: linear-gradient(125deg, #d4deec, #e5e9ed 55%, #d5dce8);
+			--project-alt-gradient: linear-gradient(125deg, #eee2c9, #f1eadc 54%, #dce2ed);
+			--progress-gradient: linear-gradient(90deg, #6579a5, #9b8eaa 56%, #c87936);
+			--ticker-gradient: linear-gradient(90deg, #e7e3d8, #efeadf 48%, #e7e3d8);
+		}
+		:root[data-theme="rain"] {
+			color-scheme: dark;
+			--night: #18242c; --surface: #202f38; --surface-raised: #2a3b45;
+			--ink: #edf5f7; --muted: #a9bdc7; --line: #3b515d;
+			--ice: #79b8cf; --ice-bright: #a8d8e8; --snow: #d9e8ec;
+			--header-bg: #18242ced; --section-bg: #1c2a32;
+			--portrait-start: #263944; --portrait-end: #35434a;
+			--portrait-label: #d0e0e5; --portrait-hint: #c2d2d8; --portrait-frame: #ffffff2b;
+			--callout-bg: #79b8cf12; --certificate-bg: #202f38;
+			--button-text: #142129; --toggle-bg: #202f38;
+			--grid-a: #d9e8ec08; --grid-b: #79b8cf0b;
+			--rain-streak: #b8deea70;
+			--hero-gradient: linear-gradient(110deg, #f2f7f8, #b8deea 48%, #79b8cf);
+			--button-gradient: linear-gradient(115deg, #79b8cf, #9dcbd8 52%, #d0e3e8);
+			--portrait-gradient: linear-gradient(145deg, #263944, #354b55 56%, #293640);
+			--project-gradient: linear-gradient(125deg, #2b414b, #354b55 55%, #24343d);
+			--project-alt-gradient: linear-gradient(125deg, #35434a, #43545d 55%, #293840);
+			--progress-gradient: linear-gradient(90deg, #79b8cf, #d9e8ec 55%, #a8d8e8);
+			--ticker-gradient: linear-gradient(90deg, #24343d, #2a3b45 48%, #24343d);
+		}
+
+		* { box-sizing: border-box; }
+		html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+		body { margin: 0; overflow-x: hidden; background: var(--night); color: var(--ink); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+		body::before { position: fixed; z-index: 0; inset: 0; background-image: linear-gradient(var(--grid-a) 1px, transparent 1px), linear-gradient(90deg, var(--grid-b) 1px, transparent 1px); background-size: 44px 44px; content: ""; pointer-events: none; }
+		a { color: inherit; }
+		a:focus-visible, button:focus-visible { outline: 2px solid var(--ice); outline-offset: 4px; }
+		.scroll-progress { position: fixed; z-index: 50; top: 0; left: 0; width: 100%; height: 3px; background: var(--progress-gradient); transform: scaleX(0); transform-origin: left; pointer-events: none; }
+		.ambient { position: fixed; z-index: 0; inset: 0; overflow: hidden; pointer-events: none; }
+		.ambient::before { position: absolute; top: 24%; left: -40%; width: 42%; height: 1px; background: linear-gradient(90deg, transparent, var(--ice), var(--snow), transparent); opacity: .55; content: ""; animation: light-sweep 18s linear infinite; }
+		.snowflake { position: absolute; top: -8vh; color: var(--ice-bright); font-size: 14px; opacity: 0; text-shadow: 0 0 12px #8fcde844; animation: snowfall 15s linear infinite; }
+		.snowflake:nth-child(1) { left: 4%; animation-delay: -3s; }
+		.snowflake:nth-child(2) { left: 9%; font-size: 10px; animation-delay: -11s; animation-duration: 19s; }
+		.snowflake:nth-child(3) { left: 14%; font-size: 18px; animation-delay: -7s; animation-duration: 17s; }
+		.snowflake:nth-child(4) { left: 19%; font-size: 11px; animation-delay: -14s; }
+		.snowflake:nth-child(5) { left: 24%; font-size: 16px; animation-delay: -5s; animation-duration: 20s; }
+		.snowflake:nth-child(6) { left: 29%; font-size: 10px; animation-delay: -9s; }
+		.snowflake:nth-child(7) { left: 34%; font-size: 17px; animation-delay: -16s; animation-duration: 18s; }
+		.snowflake:nth-child(8) { left: 39%; font-size: 12px; animation-delay: -2s; animation-duration: 21s; }
+		.snowflake:nth-child(9) { left: 44%; font-size: 9px; animation-delay: -12s; animation-duration: 18s; }
+		.snowflake:nth-child(10) { left: 49%; font-size: 15px; animation-delay: -6s; animation-duration: 22s; }
+		.snowflake:nth-child(11) { left: 54%; font-size: 11px; animation-delay: -17s; }
+		.snowflake:nth-child(12) { left: 59%; font-size: 18px; animation-delay: -4s; animation-duration: 19s; }
+		.snowflake:nth-child(13) { left: 64%; font-size: 10px; animation-delay: -13s; }
+		.snowflake:nth-child(14) { left: 69%; font-size: 14px; animation-delay: -8s; animation-duration: 20s; }
+		.snowflake:nth-child(15) { left: 74%; font-size: 9px; animation-delay: -18s; }
+		.snowflake:nth-child(16) { left: 79%; font-size: 17px; animation-delay: -10s; animation-duration: 21s; }
+		.snowflake:nth-child(17) { left: 84%; font-size: 11px; animation-delay: -1s; }
+		.snowflake:nth-child(18) { left: 89%; font-size: 15px; animation-delay: -15s; animation-duration: 18s; }
+		.snowflake:nth-child(19) { left: 94%; font-size: 10px; animation-delay: -7s; }
+		.snowflake:nth-child(20) { left: 98%; font-size: 16px; animation-delay: -19s; animation-duration: 22s; }
+		.snowflake:nth-child(21) { left: 27%; font-size: 8px; animation-delay: -20s; animation-duration: 23s; }
+		.snowflake:nth-child(22) { left: 47%; font-size: 12px; animation-delay: -22s; animation-duration: 24s; }
+		.snowflake:nth-child(23) { left: 72%; font-size: 8px; animation-delay: -23s; animation-duration: 25s; }
+		.snowflake:nth-child(24) { left: 91%; font-size: 13px; animation-delay: -21s; animation-duration: 23s; }
+		.seasonal-petal, .seasonal-leaf { display: none; position: absolute; top: -8vh; opacity: 0; animation: petal-fall 17s ease-in-out infinite; }
+		.seasonal-petal { color: var(--blossom); font-size: 16px; text-shadow: 0 0 12px currentColor; }
+		.seasonal-petal:nth-child(even) { color: var(--spring-gold); }
+		.seasonal-petal:nth-child(25) { left: 12%; animation-delay: -3s; }
+		.seasonal-petal:nth-child(26) { left: 28%; font-size: 12px; animation-delay: -12s; }
+		.seasonal-petal:nth-child(27) { left: 43%; font-size: 20px; animation-delay: -7s; }
+		.seasonal-petal:nth-child(28) { left: 57%; font-size: 13px; animation-delay: -15s; }
+		.seasonal-petal:nth-child(29) { left: 69%; font-size: 18px; animation-delay: -9s; }
+		.seasonal-petal:nth-child(30) { left: 81%; font-size: 11px; animation-delay: -5s; }
+		.seasonal-petal:nth-child(31) { left: 94%; font-size: 17px; animation-delay: -14s; }
+		.seasonal-petal:nth-child(32) { left: 35%; font-size: 10px; animation-delay: -18s; }
+		.seasonal-leaf { color: var(--leaf-orange); font-size: 18px; text-shadow: 0 2px 10px #c8793640; animation: leaf-fall 19s ease-in-out infinite; }
+		.rain-layer { display: none; position: absolute; inset: -100px; background-image: repeating-linear-gradient(105deg, transparent 0 18px, var(--rain-streak) 19px, transparent 20px 46px); background-size: 100px 120px; opacity: .42; animation: rainfall .8s linear infinite; }
+		.rain-layer::after { position: absolute; inset: -60px 0 0 30px; background-image: repeating-linear-gradient(105deg, transparent 0 31px, var(--rain-streak) 32px, transparent 33px 74px); background-size: 130px 160px; opacity: .55; content: ""; animation: rainfall 1.15s linear infinite; }
+		.rain-cloud { position: absolute; top: 9%; left: -320px; width: 270px; height: 120px; background: radial-gradient(ellipse at 25% 70%, #425964 0 24%, transparent 25%), radial-gradient(ellipse at 48% 46%, #526a75 0 30%, transparent 31%), radial-gradient(ellipse at 73% 68%, #425964 0 27%, transparent 28%), linear-gradient(transparent 58%, #425964 59% 82%, transparent 83%); opacity: .7; filter: drop-shadow(0 10px 18px #0b151a55); animation: cloud-drift 42s linear infinite; }
+		.rain-cloud:nth-child(2) { top: 20%; width: 330px; height: 145px; opacity: .5; animation-delay: -22s; animation-duration: 55s; }
+		.rain-street { display: none; position: absolute; right: 0; bottom: clamp(280px, 38vh, 370px); left: 0; height: clamp(250px, 40vh, 380px); overflow: hidden; perspective: 900px; isolation: isolate; background: linear-gradient(180deg, transparent 0 24%, #516a7433 59%, #23343c77); }
+		:root[data-theme="rain"] .rain-street { display: block; }
+		.rain-skyline { position: absolute; z-index: -1; right: 0; bottom: 43%; left: 0; height: 33%; opacity: .55; background: linear-gradient(90deg, transparent 0 2%, #344b55 2% 8%, transparent 8% 11%, #405762 11% 17%, transparent 17% 23%, #314953 23% 28%, transparent 28% 33%, #405762 33% 40%, transparent 40% 46%, #344b55 46% 53%, transparent 53% 58%, #405762 58% 65%, transparent 65% 72%, #314953 72% 79%, transparent 79% 84%, #405762 84% 91%, transparent 91% 96%, #344b55 96%); clip-path: polygon(0 35%, 5% 35%, 5% 9%, 9% 9%, 9% 42%, 14% 42%, 14% 0, 18% 0, 18% 31%, 24% 31%, 24% 18%, 30% 18%, 30% 45%, 35% 45%, 35% 4%, 40% 4%, 40% 37%, 46% 37%, 46% 12%, 51% 12%, 51% 44%, 57% 44%, 57% 0, 62% 0, 62% 29%, 69% 29%, 69% 9%, 75% 9%, 75% 41%, 80% 41%, 80% 17%, 86% 17%, 86% 34%, 92% 34%, 92% 2%, 96% 2%, 96% 39%, 100% 39%, 100% 100%, 0 100%); }
+		.rain-building { position: absolute; z-index: -1; bottom: 43%; width: 5.5%; min-width: 24px; border: 1px solid #9ab4bc30; background-color: #344b55; background-image: repeating-linear-gradient(0deg, transparent 0 12px, #78929a44 13px 15px, transparent 16px 21px), repeating-linear-gradient(90deg, #263c45 0 7px, #f0cb7a77 8px 11px, #344f59 12px 18px); box-shadow: inset 5px 0 #d2e5e80a, 5px 0 12px #101b2044; }
+		.rain-building::before { position: absolute; top: -5px; right: -2px; left: -2px; height: 5px; border: 1px solid #9ab4bc44; background: linear-gradient(90deg, #344b55, #607983 50%, #344b55); content: ""; }
+		.rain-building::after { position: absolute; top: -16px; left: 48%; width: 2px; height: 12px; background: #829ba3; box-shadow: -2px 3px #f0cb7a77, 3px 1px #f0cb7a55; content: ""; }
+		.rain-building-one { left: 4%; height: 96px; }
+		.rain-building-two { left: 13%; width: 7%; height: 132px; background-color: #3c5660; }
+		.rain-building-three { left: 25%; width: 6%; height: 112px; background-color: #2e454f; }
+		.rain-building-four { left: 36%; width: 8%; height: 146px; background-color: #3b535c; }
+		.rain-building-five { left: 52%; width: 6%; height: 118px; background-color: #2e454f; }
+		.rain-building-six { left: 64%; width: 7%; height: 136px; background-color: #405a63; }
+		.rain-building-seven { left: 78%; width: 6%; height: 104px; background-color: #304751; }
+		.rain-building-eight { left: 90%; width: 7%; height: 142px; background-color: #3c5660; }
+		.rain-ground { position: absolute; z-index: 0; right: -10%; bottom: -14%; left: -10%; height: 57%; border-top: 2px solid #9bb9c233; background: linear-gradient(180deg, #526a74, #263943 52%, #18272f); box-shadow: inset 0 9px 18px #c8e8f012; transform: rotateX(4deg); }
+		.rain-road { position: absolute; z-index: 1; right: 23%; bottom: -8%; left: 23%; height: 67%; border: 1px solid #c2dce328; background: linear-gradient(90deg, #1c2d35, var(--rain-road) 18%, #334953 49%, #253943 82%, #172932); box-shadow: inset 16px 0 23px #0d1a2055, inset -16px 0 23px #0d1a2055, 0 -3px 9px #c4eaf80c; clip-path: polygon(40% 0, 60% 0, 100% 100%, 0 100%); transform: rotateX(12deg); }
+		.rain-road::before { position: absolute; top: 0; bottom: 0; left: 49%; width: 2%; background: repeating-linear-gradient(180deg, #c8d8d866 0 10px, transparent 11px 24px); content: ""; }
+		.rain-road::after { position: absolute; top: 0; right: 9%; bottom: 0; left: 9%; border-right: 2px solid #9db4bc44; border-left: 2px solid #9db4bc44; content: ""; }
+		.rain-reflection { position: absolute; z-index: 2; bottom: 5%; width: 10%; height: 13%; border-radius: 50%; background: radial-gradient(ellipse, #f5d58d70 0, #d9bd7850 25%, #9db4bc20 53%, transparent 72%); filter: blur(3px); animation: puddle-shimmer 3.5s ease-in-out infinite alternate; }
+		.rain-reflection-one { left: 30%; }
+		.rain-reflection-two { right: 29%; bottom: 11%; width: 7%; height: 8%; animation-delay: -1.4s; }
+		.rain-bench { position: absolute; z-index: 4; bottom: 13%; left: 31%; width: 88px; height: 42px; filter: drop-shadow(5px 7px 4px #101a1f77); transform: scale(.86) perspective(160px) rotateX(5deg); transform-origin: bottom center; }
+		.rain-bench-seat, .rain-bench-back { position: absolute; right: 0; left: 0; border: 1px solid #8da1a35c; border-radius: 3px; background: repeating-linear-gradient(90deg, #725c4d 0 12px, #b18a61 13px 16px, #654f45 17px 20px); box-shadow: inset 0 3px 4px #e5d4ba30, inset 0 -3px 4px #1a272e66; }
+		.rain-bench-seat { top: 20px; height: 8px; }
+		.rain-bench-back { top: 0; height: 16px; transform: perspective(45px) rotateX(-7deg); transform-origin: bottom; }
+		.rain-bench-leg { position: absolute; top: 26px; left: 12px; width: 5px; height: 16px; border-radius: 0 0 2px 2px; background: linear-gradient(90deg, #3a4547, #8b7762 45%, #343e42); }
+		.rain-bench-leg-two { right: 12px; left: auto; }
+		.rain-bench-arm { position: absolute; top: 13px; left: 0; width: 6px; height: 15px; border-radius: 3px 3px 0 0; background: linear-gradient(90deg, #39464a, #8b7762, #354147); }
+		.rain-bench-arm-two { right: 0; left: auto; }
+		.rain-lamp { position: absolute; z-index: 4; bottom: 22%; width: 8px; height: 148px; border-radius: 5px 5px 1px 1px; background: linear-gradient(90deg, #293a40, #87999a 44%, #3b4c51); box-shadow: 4px 5px 8px #101a1f66; transform-origin: bottom center; }
+		.rain-lamp-left { left: 17%; transform: scale(.72); }
+		.rain-lamp-right { right: 15%; bottom: 18%; transform: scale(.94); }
+		.rain-lamp::before { position: absolute; top: -5px; left: -13px; width: 32px; height: 17px; border: 2px solid #51656a; border-radius: 50% 50% 35% 35%; background: radial-gradient(ellipse at 50% 83%, #fff3c8 0 28%, #f5d58d 33% 55%, #7d8580 62%); box-shadow: 0 0 10px #f5d58d99, 0 0 34px #f5d58d55; content: ""; animation: streetlamp-glow 3s ease-in-out infinite alternate; }
+		.rain-lamp::after { position: absolute; top: 9px; left: -47px; width: 96px; height: 164px; background: linear-gradient(180deg, #f5d58d30, #f5d58d0b 45%, transparent); clip-path: polygon(40% 0, 60% 0, 100% 100%, 0 100%); content: ""; pointer-events: none; }
+		.rain-person { position: absolute; z-index: 5; bottom: 8%; width: 48px; height: 132px; filter: drop-shadow(7px 8px 5px #101a1f66); transform-origin: bottom center; animation: walk-cycle 1.2s ease-in-out infinite alternate; }
+		.rain-person-one { left: 42%; transform: scale(.74); animation-delay: -.3s; }
+		.rain-person-two { right: 38%; bottom: 5%; transform: scale(.93); animation-delay: -.85s; }
+		.rain-person-head { position: absolute; z-index: 2; top: 34px; left: 18px; width: 20px; height: 23px; border: 1px solid #c5a58b; border-radius: 48% 48% 45% 45%; background: linear-gradient(120deg, #d8c0a6, #947963 82%); box-shadow: inset -4px 0 #28353a55; }
+		.rain-person-body { position: absolute; z-index: 2; top: 56px; left: 11px; width: 34px; height: 47px; border: 1px solid #a9c2c844; border-radius: 12px 12px 5px 5px; background: linear-gradient(105deg, #526f7b, #344b56 55%, #263b45); box-shadow: inset 5px 0 #d6e8eb1c, inset -5px 0 #101a1f44; }
+		.rain-person-two .rain-person-body { background: linear-gradient(105deg, #8b655b, #654b4c 55%, #3b3944); }
+		.rain-person-leg { position: absolute; z-index: 1; top: 96px; left: 17px; width: 9px; height: 30px; border-radius: 4px; background: linear-gradient(90deg, #202d35, #43535b); transform-origin: top center; animation: leg-step .65s ease-in-out infinite alternate; }
+		.rain-person-leg-two { left: 31px; animation-delay: -.65s; }
+		.rain-person-arm { position: absolute; z-index: 1; top: 60px; left: 6px; width: 8px; height: 35px; border-radius: 5px; background: linear-gradient(90deg, #283b43, #627982); transform: rotate(18deg); }
+		.rain-person-arm-two { left: 41px; height: 29px; transform: rotate(-14deg); }
+		.rain-umbrella { position: absolute; z-index: 3; top: 0; left: -8px; width: 64px; height: 39px; border-radius: 50% 50% 7% 7%; background: radial-gradient(ellipse at 50% 18%, #a7d5e2, #5b92a6 76%); box-shadow: inset 0 4px #d4edf1a8, 0 5px 8px #101a1f66; animation: umbrella-tilt 2.2s ease-in-out infinite alternate; }
+		.rain-umbrella::before { position: absolute; right: 0; bottom: -3px; left: 0; height: 8px; background: repeating-linear-gradient(90deg, transparent 0 12px, #d3e9ed 13px 14px, transparent 15px 25px); clip-path: polygon(0 0, 100% 0, 94% 65%, 82% 100%, 68% 65%, 51% 100%, 34% 65%, 18% 100%, 7% 65%); content: ""; }
+		.rain-umbrella::after { position: absolute; top: 19px; left: 31px; width: 2px; height: 39px; border-radius: 2px; background: linear-gradient(#e3eff0, #8ba5ac); box-shadow: 1px 0 2px #16252a55; content: ""; }
+		.rain-person-two .rain-umbrella { background: radial-gradient(ellipse at 50% 18%, #d9b8a5, #9e7169 76%); animation-delay: -1s; }
+		.rain-ripple { position: absolute; z-index: 3; bottom: 7%; width: 30px; height: 8px; border: 1px solid #c0dce666; border-radius: 50%; animation: ripple-expand 2.4s ease-out infinite; }
+		.rain-ripple-one { left: 46%; }
+		.rain-ripple-two { right: 40%; bottom: 9%; animation-delay: -1.2s; }
+		.rain-ripple-three { right: 27%; bottom: 5%; animation-delay: -.6s; }
+		.rain-street::after { position: absolute; z-index: 6; inset: -20px 0 0; background-image: repeating-linear-gradient(106deg, transparent 0 42px, #c3e2ec29 43px, transparent 44px 83px); background-size: 120px 160px; content: ""; pointer-events: none; animation: rainfall 1.2s linear infinite; }
+		.leaf-one { left: 6%; animation-delay: -8s; }
+		.leaf-two { left: 20%; font-size: 13px; animation-delay: -2s; }
+		.leaf-three { left: 37%; font-size: 21px; animation-delay: -14s; }
+		.leaf-four { left: 53%; font-size: 15px; animation-delay: -5s; }
+		.leaf-five { left: 66%; font-size: 19px; animation-delay: -17s; }
+		.leaf-six { left: 78%; font-size: 12px; animation-delay: -10s; }
+		.leaf-seven { left: 90%; font-size: 17px; animation-delay: -4s; }
+		.leaf-eight { left: 47%; font-size: 11px; animation-delay: -20s; }
+		.winter-scene { display: none; position: absolute; right: 0; bottom: clamp(280px, 37vh, 360px); left: 0; height: clamp(220px, 32vh, 310px); overflow: hidden; perspective: 900px; isolation: isolate; background: linear-gradient(180deg, transparent 0 25%, #8fcde808 58%, #8fcde81a); }
+		:root[data-theme="dark"] .winter-scene, :root[data-theme="light"] .winter-scene { display: block; }
+		.winter-mountain { position: absolute; z-index: -2; bottom: 43px; width: 0; height: 0; border-right: 170px solid transparent; border-bottom: 155px solid #9bb6c366; border-left: 170px solid transparent; filter: drop-shadow(0 8px 12px #10151818); }
+		.winter-mountain::after { position: absolute; top: 13px; left: -44px; width: 0; height: 0; border-right: 44px solid transparent; border-bottom: 43px solid #f2f8fae0; border-left: 44px solid transparent; content: ""; }
+		.winter-mountain-one { left: 13%; transform: scale(.78); transform-origin: bottom center; }
+		.winter-mountain-two { right: 15%; bottom: 37px; transform: scale(1.02); transform-origin: bottom center; }
+		.winter-mountain-three { right: 38%; bottom: 47px; transform: scale(.58); transform-origin: bottom center; opacity: .75; }
+		.winter-hill { position: absolute; z-index: -1; bottom: -105px; border: 1px solid #7899a833; border-radius: 50% 50% 0 0; transform: rotateX(9deg); }
+		.winter-hill-back { left: -10%; bottom: -26px; width: 77%; height: 205px; background: linear-gradient(165deg, #dceaf0, #b8d0dc 72%, #9dbac8); box-shadow: inset 0 13px 22px #fff9, 0 -9px 24px #7d9bad22; }
+		.winter-hill-mid { right: -10%; bottom: -60px; width: 78%; height: 235px; background: linear-gradient(195deg, #eaf3f6, #c4d9e2 70%, #a9c3ce); box-shadow: inset 0 12px 22px #fff9, 0 -10px 24px #7d9bad22; }
+		.winter-hill-front { right: 12%; bottom: -105px; left: 9%; height: 230px; background: linear-gradient(180deg, #f1f7f9, #cfdee5 77%, #b4cbd5); box-shadow: inset 0 11px 25px #fff, 0 -8px 22px #7d9bad24; }
+		.winter-pine { position: absolute; z-index: 2; bottom: 19%; width: 76px; height: 168px; filter: drop-shadow(8px 9px 5px #233b4930); transform-origin: bottom center; animation: pine-sway 6s ease-in-out infinite alternate; }
+		.winter-pine-left { left: 7%; transform: scale(.86); }
+		.winter-pine-mid { left: 34%; bottom: 16%; transform: scale(.63); animation-delay: -2s; }
+		.winter-pine-right { right: 9%; transform: scale(1.08); animation-delay: -3s; }
+		.winter-pine-back { right: 27%; bottom: 18%; transform: scale(.7); animation-delay: -1s; }
+		.winter-pine-trunk { position: absolute; bottom: 0; left: 33px; width: 11px; height: 36px; border-radius: 3px; background: linear-gradient(90deg, #61493f, var(--winter-wood), #9a7356); box-shadow: inset 2px 0 #ffffff24; }
+		.winter-branch { position: absolute; left: 7px; width: 62px; height: 78px; clip-path: polygon(50% 0, 91% 72%, 72% 68%, 100% 100%, 0 100%, 28% 68%, 9% 72%); background: linear-gradient(115deg, #547e8c 0%, var(--winter-pine-light) 28%, var(--winter-pine) 69%, #244453 100%); filter: drop-shadow(0 5px 4px #18303b40); }
+		.winter-branch-one { top: 2px; transform: scale(.72); }
+		.winter-branch-two { top: 35px; transform: scale(.92); }
+		.winter-branch-three { top: 72px; transform: scale(1.12); }
+		.winter-branch::after { position: absolute; top: 0; right: 0; left: 0; height: 22px; background: linear-gradient(155deg, #fff 0 18%, #e3f0f5 19% 43%, transparent 44%); clip-path: polygon(50% 0, 92% 72%, 73% 67%, 100% 100%, 0 100%, 27% 67%, 8% 72%); content: ""; opacity: .92; }
+		.winter-cabin { position: absolute; z-index: 3; right: 39%; bottom: 16%; width: 104px; height: 69px; border: 2px solid #725441; border-radius: 3px; background: linear-gradient(90deg, #8e674d, #bd9065 46%, #956d50); box-shadow: inset 7px 0 #ffffff12, 0 9px 12px #233b4938; }
+		.winter-cabin::before { position: absolute; top: -31px; left: -12px; width: 124px; height: 38px; border: 2px solid #684d42; border-radius: 5px 5px 0 0; background: linear-gradient(160deg, #9bb8c3 0 13%, #755443 14% 68%, #5d4439 69%); clip-path: polygon(50% 0, 100% 76%, 96% 100%, 4% 100%, 0 76%); content: ""; }
+		.winter-cabin::after { position: absolute; top: -43px; right: 17px; width: 14px; height: 35px; border: 2px solid #6b5042; background: linear-gradient(90deg, #b1c6cb, #755443 55%); content: ""; }
+		.winter-cabin-window { position: absolute; z-index: 1; top: 15px; right: 14px; width: 20px; height: 22px; border: 3px solid #e4ddd0; background: linear-gradient(135deg, #ffe8a6, var(--winter-window) 55%, #d89553); box-shadow: 0 0 13px #f5d58d88, inset 0 0 5px #fff7c5; animation: window-glow 3s ease-in-out infinite alternate; }
+		.winter-cabin-door { position: absolute; bottom: 0; left: 17px; width: 22px; height: 37px; border: 2px solid #604839; border-bottom: 0; border-radius: 8px 8px 0 0; background: linear-gradient(90deg, #78563f, #a67c56); }
+		.winter-cabin-door::after { position: absolute; top: 19px; right: 3px; width: 3px; height: 3px; border-radius: 50%; background: #f2d28c; content: ""; }
+		.winter-smoke { position: absolute; z-index: 2; right: 44%; bottom: calc(16% + 100px); width: 13px; height: 13px; border-radius: 50%; background: #f3f8f988; filter: blur(1px); animation: chimney-smoke 4.5s ease-out infinite; }
+		.winter-smoke-two { animation-delay: -2.2s; }
+		.winter-igloo { position: absolute; z-index: 3; bottom: 10%; left: 69%; width: 142px; height: 98px; filter: drop-shadow(8px 10px 7px #233b4938); }
+		.winter-igloo-shell { position: absolute; right: 0; bottom: 0; left: 0; height: 88px; overflow: hidden; border: 2px solid #a9c7d5; border-bottom: 0; border-radius: 78px 78px 12px 12px; background: repeating-linear-gradient(0deg, transparent 0 17px, #8eafc366 18px 20px, transparent 21px 22px), repeating-linear-gradient(90deg, #d9edf5 0 30px, #bdd8e4 31px 34px, #eaf6fa 35px 62px); box-shadow: inset 9px 5px 13px #fff9, inset -12px -4px 16px #7798aa55, 0 8px 12px #233b4922; }
+		.winter-igloo-shell::before { position: absolute; inset: 0; border-radius: inherit; background: linear-gradient(110deg, #fff9, transparent 38% 70%, #597d9230); content: ""; }
+		.winter-igloo-door { position: absolute; z-index: 1; bottom: 0; left: 51px; width: 40px; height: 52px; border: 5px solid #9bbdcd; border-bottom: 0; border-radius: 24px 24px 0 0; background: linear-gradient(90deg, #1c3344, #38566a 58%, #172b3b); box-shadow: inset 5px 0 8px #101d2a77, 0 0 0 2px #f2fbff55; }
+		.winter-igloo-door::before { position: absolute; top: -7px; right: -9px; left: -9px; height: 7px; border-radius: 50%; background: #f5fbff; box-shadow: 0 2px 5px #7b9aaa66; content: ""; }
+		.winter-igloo-glow { position: absolute; z-index: 2; top: 49px; right: 18px; width: 7px; height: 9px; border-radius: 50%; background: #f6dfad; box-shadow: 0 0 10px #f6dfad, 0 0 23px #f6dfad88; }
+		:root[data-theme="dark"] .winter-igloo { filter: drop-shadow(8px 10px 9px #050c18aa); }
+		:root[data-theme="dark"] .winter-igloo-shell { border-color: #819fb6; background: repeating-linear-gradient(0deg, transparent 0 17px, #6f91aa88 18px 20px, transparent 21px 22px), repeating-linear-gradient(90deg, #a9c7db 0 30px, #7f9fb8 31px 34px, #d6e8f0 35px 62px); box-shadow: inset 9px 5px 13px #fff9, inset -12px -4px 16px #4d688455, 0 8px 12px #050c1855; }
+		.winter-igloo-shell::before { background: linear-gradient(110deg, #fff9, transparent 38% 70%, #253b5833); }
+		.winter-snowman { position: absolute; z-index: 5; bottom: 8%; left: 19%; width: 78px; height: 125px; filter: drop-shadow(7px 9px 5px #233b4933); animation: snowman-bob 4s ease-in-out infinite alternate; }
+		.snowman-base, .snowman-body, .snowman-head { position: absolute; left: 50%; border: 1px solid #c1d3dd; border-radius: 50%; background: radial-gradient(ellipse at 30% 22%, #fff 0 10%, #f5fafc 37%, #d9e7ed 78%, #a9c1cd 100%); box-shadow: inset -7px -5px 10px #819daa40, inset 5px 5px 9px #fff; transform: translateX(-50%); }
+		.snowman-base { bottom: 0; width: 70px; height: 62px; }
+		.snowman-body { bottom: 43px; width: 53px; height: 48px; }
+		.snowman-head { bottom: 80px; width: 38px; height: 38px; }
+		.snowman-head::before { position: absolute; top: 13px; left: 10px; width: 4px; height: 5px; border-radius: 50%; background: #26343a; box-shadow: 13px 0 #26343a, 7px 11px 0 -1px #c7794d; content: ""; }
+		.snowman-head::after { position: absolute; top: -9px; left: 3px; width: 32px; height: 9px; border-radius: 3px 3px 1px 1px; background: linear-gradient(#303b42, #1b252b); box-shadow: 5px -8px 0 -2px #303b42; content: ""; }
+		.snowman-scarf { position: absolute; z-index: 1; bottom: 70px; left: 13px; width: 53px; height: 9px; border: 1px solid #7096a8; border-radius: 7px; background: linear-gradient(90deg, #739bb0, #a8c9d4 50%, #668da1); box-shadow: 0 2px 3px #506d7d55; }
+		.snowman-scarf::after { position: absolute; top: 5px; right: 7px; width: 9px; height: 19px; border-radius: 2px 2px 5px 5px; background: linear-gradient(90deg, #739bb0, #a8c9d4); content: ""; transform: rotate(-8deg); transform-origin: top; animation: scarf-flutter 2.6s ease-in-out infinite alternate; }
+		.snowman-arm { position: absolute; z-index: -1; top: 64px; left: -3px; width: 33px; height: 4px; border-radius: 4px; background: linear-gradient(#684d3b, #9a7657); transform: rotate(-25deg); }
+		.snowman-arm::after { position: absolute; top: -6px; right: 0; width: 4px; height: 13px; border-radius: 3px; background: #79583f; content: ""; transform: rotate(36deg); }
+		.winter-sparkle { position: absolute; z-index: 4; color: #fff; font-size: 15px; opacity: .7; text-shadow: 0 0 12px #c4eaf8; animation: sparkle 2.8s ease-in-out infinite alternate; }
+		.winter-sparkle-one { right: 34%; bottom: 25%; }
+		.winter-sparkle-two { left: 38%; bottom: 9%; font-size: 11px; animation-delay: -1.3s; }
+		.winter-sparkle-three { right: 8%; bottom: 39%; font-size: 12px; animation-delay: -2s; }
+		.winter-night-sky { display: none; position: absolute; z-index: -3; inset: 0 0 23%; overflow: hidden; background: linear-gradient(180deg, #091321, #17283e 65%, #30445b); }
+		.winter-night-sky::before, .winter-night-sky::after { position: absolute; inset: 0; content: ""; pointer-events: none; }
+		.winter-night-sky::before { top: 28%; background: linear-gradient(165deg, transparent 12%, #75d5d033 27%, #8ec9ec24 38%, transparent 54%), linear-gradient(195deg, transparent 19%, #617be033 36%, #62c6b525 49%, transparent 64%); filter: blur(13px); transform: skewY(-8deg); animation: aurora-flow 12s ease-in-out infinite alternate; }
+		.winter-night-sky::after { background-image: radial-gradient(1.5px 1.5px at 8% 22%, #fff 99%, transparent), radial-gradient(1px 1px at 18% 48%, #c8eaf8 99%, transparent), radial-gradient(2px 2px at 30% 15%, #fff 99%, transparent), radial-gradient(1px 1px at 42% 37%, #fff 99%, transparent), radial-gradient(1.5px 1.5px at 55% 12%, #d9f3ff 99%, transparent), radial-gradient(1px 1px at 63% 29%, #fff 99%, transparent), radial-gradient(2px 2px at 74% 18%, #fff 99%, transparent), radial-gradient(1px 1px at 83% 41%, #d9f3ff 99%, transparent), radial-gradient(1.5px 1.5px at 93% 13%, #fff 99%, transparent), radial-gradient(1px 1px at 23% 31%, #fff 99%, transparent), radial-gradient(1px 1px at 68% 49%, #fff 99%, transparent); opacity: .82; animation: star-twinkle 3.5s ease-in-out infinite alternate; }
+		.winter-moon { display: none; position: absolute; z-index: -2; top: 12%; right: 19%; width: 54px; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle at 34% 30%, #fffdf3, #f5eac6 65%, #d8d4bd); box-shadow: 0 0 16px #fff5ce99, 0 0 48px #c5d7f055, 0 0 90px #8aaad533; }
+		.winter-moon::after { position: absolute; top: -4px; left: 13px; width: 54px; aspect-ratio: 1; border-radius: 50%; background: #101a2b; content: ""; }
+		:root[data-theme="dark"] .winter-night-sky, :root[data-theme="dark"] .winter-moon { display: block; }
+		:root[data-theme="dark"] .winter-scene { background: linear-gradient(180deg, #091321 0 42%, #112239 70%, #21344b); }
+		:root[data-theme="dark"] .winter-mountain { border-bottom-color: #435b79; filter: drop-shadow(0 8px 14px #050c17aa); }
+		:root[data-theme="dark"] .winter-mountain::after { border-bottom-color: #e1edf5; }
+		:root[data-theme="dark"] .winter-hill-back { background: linear-gradient(165deg, #7c95ac, #526b87 72%, #364f6c); box-shadow: inset 0 13px 22px #eaf6ff55, 0 -9px 24px #83b7d522; }
+		:root[data-theme="dark"] .winter-hill-mid { background: linear-gradient(195deg, #9fb2c2, #7189a1 70%, #4b657e); box-shadow: inset 0 12px 22px #f1f8ff66, 0 -10px 24px #83b7d522; }
+		:root[data-theme="dark"] .winter-hill-front { background: linear-gradient(180deg, #d2e0e8, #a5bac9 77%, #758ea3); box-shadow: inset 0 11px 25px #fff, 0 -8px 22px #6e9bbc55; }
+		:root[data-theme="dark"] .winter-pine { filter: drop-shadow(8px 9px 7px #050c18aa); }
+		:root[data-theme="dark"] .winter-branch { background: linear-gradient(115deg, #254256 0%, #31596d 28%, #19384d 69%, #102b3e 100%); }
+		:root[data-theme="dark"] .winter-branch::after { background: linear-gradient(155deg, #f5fbff 0 18%, #c7dce9 19% 43%, transparent 44%); }
+		:root[data-theme="dark"] .winter-cabin { box-shadow: inset 7px 0 #ffffff12, 0 9px 16px #050c18aa; }
+		:root[data-theme="dark"] .winter-snowman { filter: drop-shadow(7px 9px 8px #050c18aa); }
+		.spring-garden { display: none; position: absolute; right: 0; bottom: 0; left: 0; height: clamp(480px, 60vh, 580px); overflow: hidden; perspective: 900px; isolation: isolate; background: linear-gradient(180deg, #b9dbe4 0%, #dce9df 37%, #edf0df88 62%, transparent 88%); }
+		.spring-hill { position: absolute; z-index: 0; bottom: -96px; border: 1px solid #668c6726; border-radius: 50% 50% 0 0; transform: rotateX(8deg); }
+		.spring-hill-back { bottom: -10px; left: -6%; width: 58%; height: 245px; background: linear-gradient(155deg, #b6c59a, #93ad7e 60%, #77976d); box-shadow: inset 0 12px 20px #fff8d722, 0 -12px 30px #668c6718; }
+		.spring-hill-mid { right: -6%; bottom: -42px; width: 61%; height: 265px; background: linear-gradient(205deg, #afc394, #88a879 64%, #6f946f); box-shadow: inset 0 10px 20px #fff8d72b, 0 -10px 25px #526c4c20; }
+		.spring-hill-front { right: 18%; bottom: -115px; left: 22%; height: 200px; background: linear-gradient(180deg, #a3ba83, #76976e 72%, #65865f); box-shadow: inset 0 10px 24px #fff9dc30, 0 -8px 22px #526c4c20; }
+		.spring-lawn { position: absolute; z-index: 2; right: -6%; bottom: -1%; left: -6%; height: 170px; border: 1px solid #668c6740; border-bottom: 0; background: linear-gradient(180deg, #a9c486 0%, #91b475 24%, #83a36f 55%, #6d9064 100%); box-shadow: inset 0 12px 18px #f5f3d533, 0 -8px 18px #526c4c20; clip-path: polygon(0 30%, 12% 19%, 24% 25%, 37% 10%, 49% 18%, 62% 8%, 76% 18%, 88% 12%, 100% 24%, 100% 100%, 0 100%); }
+		.spring-lawn::before { position: absolute; top: 0; right: 0; left: 0; height: 28px; border-top: 2px solid #d9e4b06e; background: linear-gradient(180deg, #d6e1aa2b, transparent); content: ""; }
+		.spring-path { position: absolute; z-index: 3; bottom: -3%; left: 43%; width: 16%; height: 40%; border: 2px solid #f4e4bd88; border-bottom: 0; background: repeating-linear-gradient(0deg, transparent 0 30px, #9a805b30 31px 32px, transparent 33px 36px), linear-gradient(90deg, #a9895e, #d5bd8e 20%, #efdfb8 52%, #baa071); box-shadow: inset 8px 0 14px #765b382e, inset -8px 0 13px #765b3824, 0 0 0 1px #fff3d555; clip-path: polygon(40% 0, 60% 0, 100% 100%, 0 100%); }
+		.spring-bushes { position: absolute; z-index: 4; bottom: 1%; width: 140px; height: 64px; border-radius: 55% 45% 16% 20%; background: radial-gradient(ellipse at 24% 40%, #a6bd81 0 18%, transparent 19%), radial-gradient(ellipse at 44% 27%, #88a973 0 26%, transparent 27%), radial-gradient(ellipse at 69% 39%, #71966d 0 27%, transparent 28%), linear-gradient(0deg, #64865e 0 24%, transparent 25%); filter: drop-shadow(0 7px 6px #465b4433); }
+		.spring-bush-left { left: 24%; transform: scale(.8); transform-origin: bottom center; }
+		.spring-bush-right { right: 22%; transform: scale(.65); transform-origin: bottom center; }
+		.spring-bench { position: absolute; z-index: 5; bottom: 1%; left: 43%; width: 58px; height: 30px; border-bottom: 5px solid #74563e; background: repeating-linear-gradient(0deg, transparent 0 5px, #a77a4e 6px 9px, #795a40 10px 12px); filter: drop-shadow(0 7px 4px #33452e66); transform: scale(.8) rotateX(8deg); }
+		.spring-bench::before { position: absolute; top: 25px; right: 8px; left: 8px; height: 18px; border-right: 4px solid #70513b; border-left: 4px solid #70513b; content: ""; }
+		.spring-bench::after { position: absolute; top: -18px; right: -2px; left: -2px; height: 15px; border: 4px solid #795a40; border-bottom: 0; border-radius: 4px 4px 0 0; background: repeating-linear-gradient(90deg, #a77a4e 0 11px, #795a40 12px 14px); content: ""; }
+		.spring-mushroom { position: absolute; z-index: 4; bottom: 1%; left: 35%; width: 20px; height: 25px; border-radius: 50% 50% 24% 24%; background: linear-gradient(90deg, #fff0cf, #fffaf0 52%, #dfd0af); filter: drop-shadow(0 3px 3px #465b4433); }
+		.spring-mushroom::before { position: absolute; top: -10px; left: -7px; width: 34px; height: 17px; border: 1px solid #a85255; border-radius: 50% 50% 35% 35%; background: radial-gradient(circle at 28% 44%, #fff1d2 0 2px, transparent 3px), radial-gradient(circle at 69% 36%, #fff1d2 0 2px, transparent 3px), linear-gradient(160deg, #d67a70, #a85255); box-shadow: inset 0 3px 4px #ffe3c966; content: ""; }
+		.spring-mushroom-two { left: 70%; bottom: 1%; transform: scale(.7); transform-origin: bottom center; }
+		.spring-grass-blade { position: absolute; z-index: 4; bottom: 4%; width: 9px; height: 27px; border-radius: 100% 0 80% 0; background: linear-gradient(110deg, #b6c98d 0 20%, #64865e 72%); box-shadow: 2px 1px 3px #465b4433; transform: rotate(-24deg); transform-origin: bottom center; }
+		.spring-grass-blade:nth-of-type(13) { left: 12%; height: 34px; }
+		.spring-grass-blade:nth-of-type(14) { left: 14%; height: 24px; transform: rotate(20deg); }
+		.spring-grass-blade:nth-of-type(15) { left: 27%; height: 30px; transform: rotate(-13deg); }
+		.spring-grass-blade:nth-of-type(16) { left: 29%; height: 21px; transform: rotate(28deg); }
+		.spring-grass-blade:nth-of-type(17) { left: 73%; height: 35px; transform: rotate(-20deg); }
+		.spring-grass-blade:nth-of-type(18) { left: 75%; height: 26px; transform: rotate(25deg); }
+		.spring-grass-blade:nth-of-type(19) { left: 92%; height: 32px; transform: rotate(-19deg); }
+		.spring-grass-blade:nth-of-type(20) { left: 94%; height: 23px; transform: rotate(21deg); }
+		.spring-sun { position: absolute; z-index: 3; top: 2%; right: 8%; width: 72px; aspect-ratio: 1; border: 1px solid #fff2c7aa; border-radius: 50%; background: radial-gradient(circle at 32% 27%, #fff8d5 0 5%, #f9dc91 32%, #edbd63 68%, #ce9250 100%); box-shadow: inset -7px -8px 12px #c4824355, inset 5px 5px 10px #fff9cfaa, 0 0 20px #ffe9a8aa, 0 0 54px #f5d58d88, 0 0 100px #f5d58d55; animation: sun-float 6s ease-in-out infinite alternate; }
+		.spring-sun::before { position: absolute; z-index: -1; inset: -16px; border-radius: 50%; background: repeating-conic-gradient(from 4deg, #ffe8a577 0deg 3deg, transparent 4deg 30deg); mask: radial-gradient(circle, transparent 0 63%, #000 66% 78%, transparent 81%); content: ""; animation: sun-rays 38s linear infinite; }
+		.spring-sun::after { position: absolute; top: 18%; left: 21%; width: 18px; height: 10px; border-radius: 50%; background: #fff8d7aa; filter: blur(3px); content: ""; transform: rotate(-35deg); }
+		.spring-cloud { position: absolute; z-index: 1; top: 9%; left: 24%; width: 132px; height: 33px; border: 1px solid #fffdf8cc; border-radius: 30px; background: linear-gradient(180deg, #fff 0%, #fffefa 44%, #e2edf0 100%); box-shadow: inset 0 5px 8px #fff, inset 0 -5px 8px #b7cbd244, 0 9px 14px #59738224; filter: drop-shadow(0 3px 5px #52677524); animation: spring-cloud-drift 46s linear infinite; }
+		.spring-cloud::before, .spring-cloud::after { position: absolute; bottom: 8px; border: 1px solid #fffdf8cc; border-radius: 50%; background: radial-gradient(ellipse at 36% 23%, #fff 0 10%, #fffefa 39%, #dce9ed 100%); box-shadow: inset -4px -4px 7px #b7cbd244, inset 3px 3px 6px #fff; content: ""; }
+		.spring-cloud::before { left: 20px; width: 48px; height: 48px; }
+		.spring-cloud::after { right: 20px; bottom: 5px; width: 38px; height: 38px; }
+		.spring-cloud-two { top: 15%; left: 67%; width: 105px; height: 27px; opacity: .9; animation-delay: 12s; animation-duration: 72s; transform: scale(.76); }
+		.spring-cloud-three { top: 3%; left: 48%; width: 82px; height: 21px; opacity: .8; animation-delay: 26s; animation-duration: 82s; transform: scale(.62); }
+		.spring-cloud-four { top: 21%; left: 12%; width: 75px; height: 20px; opacity: .76; animation-delay: 39s; animation-duration: 94s; transform: scale(.58); }
+		.spring-tree { position: absolute; z-index: 4; bottom: 1%; width: 96px; height: 150px; isolation: isolate; }
+		.spring-tree::after { position: absolute; z-index: -1; right: 12%; bottom: 0; left: 12%; height: 12px; border-radius: 50%; background: #34482f70; filter: blur(4px); content: ""; }
+		.spring-tree-left { left: 5%; transform: scale(.88); transform-origin: bottom center; }
+		.spring-tree-right { right: 7%; transform: scale(1.08); transform-origin: bottom center; }
+		.spring-trunk { position: absolute; bottom: 0; left: 43px; width: 14px; height: 88px; border-radius: 8px 8px 2px 2px; background: linear-gradient(90deg, #76563f, var(--spring-trunk) 55%, #a27a56); }
+		.spring-trunk::before, .spring-trunk::after { position: absolute; bottom: 43px; left: 1px; width: 7px; height: 42px; border-radius: 8px; background: var(--spring-trunk); content: ""; transform: rotate(-32deg); transform-origin: bottom; }
+		.spring-trunk::after { left: 7px; transform: rotate(34deg); }
+		.spring-canopy { position: absolute; top: 0; left: 13px; width: 68px; height: 72px; border-radius: 48% 52% 48% 52%; background: radial-gradient(circle at 30% 30%, #a7bc86 0 15%, transparent 16%), radial-gradient(circle at 66% 24%, #86a977 0 22%, transparent 23%), radial-gradient(circle at 48% 58%, var(--spring-leaf) 0 44%, transparent 45%), radial-gradient(circle at 20% 70%, #77976d 0 28%, transparent 29%), radial-gradient(circle at 82% 66%, #77976d 0 28%, transparent 29%); filter: drop-shadow(0 5px 8px #526c4c30); animation: canopy-sway 5s ease-in-out infinite alternate; }
+		.spring-canopy-two { top: 22px; left: 0; transform: scale(.68); animation-delay: -2s; }
+		.spring-canopy-three { top: 19px; left: 34px; transform: scale(.72); animation-delay: -3.5s; }
+		.spring-flower { position: absolute; z-index: 5; bottom: 2%; width: 9px; height: 38px; border-radius: 50% 0; background: linear-gradient(90deg, #4f7955, #87a76a 58%, #557b54); box-shadow: 2px 3px 4px #465b4433; transform-origin: bottom center; animation: flower-sway 3s ease-in-out infinite alternate; }
+		.spring-flower::before { position: absolute; top: -12px; left: -7px; width: 24px; height: 24px; border-radius: 50%; background: radial-gradient(circle at 50% 50%, #e2b95d 0 13%, transparent 14%), radial-gradient(ellipse at 50% 12%, #fff5d8 0 22%, transparent 24%), radial-gradient(ellipse at 88% 42%, #fff5d8 0 22%, transparent 24%), radial-gradient(ellipse at 70% 88%, #fff5d8 0 22%, transparent 24%), radial-gradient(ellipse at 28% 88%, #fff5d8 0 22%, transparent 24%), radial-gradient(ellipse at 12% 42%, #fff5d8 0 22%, transparent 24%); filter: drop-shadow(0 2px 3px #765b3844); content: ""; }
+		.spring-flower::after { position: absolute; top: 13px; left: 3px; width: 12px; height: 7px; border-radius: 100% 0 100% 0; background: linear-gradient(135deg, #a7bd7d, #65865f); content: ""; transform: rotate(-23deg); }
+		.spring-flower:nth-of-type(22) { left: 17%; }
+		.spring-flower:nth-of-type(23) { left: 31%; height: 30px; animation-delay: -1s; }
+		.spring-flower:nth-of-type(23)::before { background: radial-gradient(circle at 50% 50%, #e0b256 0 13%, transparent 14%), radial-gradient(ellipse at 50% 12%, #e9a1a8 0 22%, transparent 24%), radial-gradient(ellipse at 88% 42%, #e9a1a8 0 22%, transparent 24%), radial-gradient(ellipse at 70% 88%, #e9a1a8 0 22%, transparent 24%), radial-gradient(ellipse at 28% 88%, #e9a1a8 0 22%, transparent 24%), radial-gradient(ellipse at 12% 42%, #e9a1a8 0 22%, transparent 24%); }
+		.spring-flower:nth-of-type(24) { left: 42%; height: 27px; transform: scale(.8); }
+		.spring-flower:nth-of-type(25) { left: 62%; height: 32px; animation-delay: -2s; }
+		.spring-flower:nth-of-type(25)::before { background: radial-gradient(circle at 50% 50%, #d3a54b 0 13%, transparent 14%), radial-gradient(ellipse at 50% 12%, #f4d885 0 22%, transparent 24%), radial-gradient(ellipse at 88% 42%, #f4d885 0 22%, transparent 24%), radial-gradient(ellipse at 70% 88%, #f4d885 0 22%, transparent 24%), radial-gradient(ellipse at 28% 88%, #f4d885 0 22%, transparent 24%), radial-gradient(ellipse at 12% 42%, #f4d885 0 22%, transparent 24%); }
+		.spring-flower:nth-of-type(26) { left: 76%; height: 27px; transform: scale(.8); }
+		.spring-flower:nth-of-type(27) { left: 88%; height: 34px; animation-delay: -1.5s; }
+		.spring-flower:nth-of-type(27)::before { background: radial-gradient(circle at 50% 50%, #e0b256 0 13%, transparent 14%), radial-gradient(ellipse at 50% 12%, #e9a1a8 0 22%, transparent 24%), radial-gradient(ellipse at 88% 42%, #e9a1a8 0 22%, transparent 24%), radial-gradient(ellipse at 70% 88%, #e9a1a8 0 22%, transparent 24%), radial-gradient(ellipse at 28% 88%, #e9a1a8 0 22%, transparent 24%), radial-gradient(ellipse at 12% 42%, #e9a1a8 0 22%, transparent 24%); }
+		.spring-butterfly { position: absolute; top: 55%; left: 47%; color: #bd87a7; font-size: 20px; animation: butterfly-float 7s ease-in-out infinite; }
+		.spring-butterfly-two { top: 67%; left: 72%; color: #d39a5c; font-size: 15px; animation-delay: -3s; }
+		:root[data-theme="spring"] .spring-garden { display: block; }
+		:root[data-theme="spring"] .seasonal-leaf { color: var(--spring-leaf); }
+		:root[data-theme="spring"] .snowflake { display: none; }
+		:root[data-theme="spring"] .seasonal-petal, :root[data-theme="spring"] .seasonal-leaf { display: block; }
+		:root[data-theme="rain"] .snowflake, :root[data-theme="rain"] .seasonal-petal, :root[data-theme="rain"] .seasonal-leaf { display: none; }
+		:root[data-theme="spring"] body::before { background-image: radial-gradient(#729a7540 1px, transparent 1px); background-size: 24px 24px; }
+		:root[data-theme="spring"] .spring-garden { height: clamp(480px, 62vh, 600px); perspective: none; background: linear-gradient(180deg, #b9e2e7 0 48%, #dff0d7 100%); }
+		:root[data-theme="spring"] .spring-hill { border: 0; border-radius: 0; box-shadow: none; transform: none; }
+		:root[data-theme="spring"] .spring-hill-back { background: #a8cf9e; clip-path: polygon(0 52%, 16% 36%, 35% 46%, 53% 26%, 73% 38%, 100% 18%, 100% 100%, 0 100%); }
+		:root[data-theme="spring"] .spring-hill-mid { background: #8fc58a; clip-path: polygon(0 33%, 18% 46%, 42% 22%, 62% 40%, 83% 19%, 100% 31%, 100% 100%, 0 100%); }
+		:root[data-theme="spring"] .spring-hill-front { background: #74ad79; clip-path: polygon(0 25%, 18% 14%, 37% 26%, 58% 8%, 79% 20%, 100% 7%, 100% 100%, 0 100%); }
+		:root[data-theme="spring"] .spring-lawn { border: 0; background: #82bd7b; box-shadow: none; }
+		:root[data-theme="spring"] .spring-lawn::before { border: 0; background: #a4d28c; }
+		:root[data-theme="spring"] .spring-path { left: 47%; width: 8%; border: 0; background: #f2d59c; box-shadow: none; }
+		:root[data-theme="spring"] .spring-bushes { border-radius: 0; background: radial-gradient(ellipse at 20% 72%, #62a96e 0 23%, transparent 24%), radial-gradient(ellipse at 45% 45%, #76bd79 0 28%, transparent 29%), radial-gradient(ellipse at 72% 65%, #559e68 0 27%, transparent 28%); filter: none; }
+		:root[data-theme="spring"] .spring-bench { border-bottom-color: #9a6246; background: repeating-linear-gradient(0deg, transparent 0 5px, #d28a58 6px 9px, #9a6246 10px 12px); filter: none; transform: scale(.8); }
+		:root[data-theme="spring"] .spring-bench::before, :root[data-theme="spring"] .spring-bench::after { border-color: #9a6246; background-color: #d28a58; }
+		:root[data-theme="spring"] .spring-mushroom { border-radius: 50% 50% 18% 18%; background: #fff0cf; filter: none; }
+		:root[data-theme="spring"] .spring-mushroom::before { background: radial-gradient(circle at 28% 44%, #fff1d2 0 2px, transparent 3px), radial-gradient(circle at 69% 36%, #fff1d2 0 2px, transparent 3px), #e97872; box-shadow: none; }
+		:root[data-theme="spring"] .spring-grass-blade { background: #538f60; box-shadow: none; }
+		:root[data-theme="spring"] .spring-sun { top: 2%; right: auto; left: 57%; border: 3px solid #fff2b5; background: #ffd568; box-shadow: none; }
+		:root[data-theme="spring"] .spring-sun::before { background: repeating-conic-gradient(#ffe89b 0deg 4deg, transparent 5deg 30deg); }
+		:root[data-theme="spring"] .spring-sun::after { background: #fff0b4; filter: none; }
+		:root[data-theme="spring"] .spring-cloud { border: 0; border-radius: 24px; background: #fffdf2; box-shadow: none; filter: none; }
+		:root[data-theme="spring"] .spring-cloud::before, :root[data-theme="spring"] .spring-cloud::after { border: 0; background: #fffdf2; box-shadow: none; }
+		:root[data-theme="spring"] .spring-tree { filter: none; }
+		:root[data-theme="spring"] .spring-tree::after { display: none; }
+		:root[data-theme="spring"] .spring-trunk, :root[data-theme="spring"] .spring-trunk::before, :root[data-theme="spring"] .spring-trunk::after { background: #a96f4e; }
+		:root[data-theme="spring"] .spring-canopy { border: 3px solid #4b955f; background: radial-gradient(circle at 30% 35%, #a4d77e 0 21%, transparent 22%), radial-gradient(circle at 67% 30%, #83c76f 0 27%, transparent 28%), radial-gradient(circle at 50% 66%, #69b96c 0 40%, transparent 41%), radial-gradient(circle at 18% 70%, #83c76f 0 27%, transparent 28%), radial-gradient(circle at 82% 68%, #5eaa66 0 27%, transparent 28%); filter: none; }
+		:root[data-theme="spring"] .spring-tree-left { left: 0; bottom: 20%; transform: scale(1.18); transform-origin: bottom center; }
+		:root[data-theme="spring"] .spring-tree-right { right: 6%; bottom: 22%; transform: scale(1.28); transform-origin: bottom center; }
+		:root[data-theme="spring"] .spring-tree-center { left: 35%; bottom: 25%; transform: scale(.78); transform-origin: bottom center; }
+		:root[data-theme="spring"] .spring-house { position: absolute; z-index: 3; bottom: 24%; width: 68px; height: 48px; border: 3px solid #9b684d; border-bottom-width: 2px; border-radius: 3px 3px 0 0; background: #f4c98a; box-shadow: inset 6px 0 #ffe8b655; }
+		:root[data-theme="spring"] .spring-house::before { position: absolute; top: -28px; left: -8px; width: 76px; height: 34px; border: 3px solid #a45f4d; background: #d9826e; clip-path: polygon(50% 0, 100% 80%, 94% 100%, 6% 100%, 0 80%); content: ""; }
+		:root[data-theme="spring"] .spring-house::after { position: absolute; top: -34px; left: 49px; width: 9px; height: 19px; border: 2px solid #9b684d; border-bottom: 0; background: #edc38e; content: ""; }
+		:root[data-theme="spring"] .spring-house-left { left: 57%; bottom: 14%; transform: scale(.82); transform-origin: bottom center; }
+		:root[data-theme="spring"] .spring-house-right { right: 4%; bottom: 12%; transform: scale(.68); transform-origin: bottom center; }
+		:root[data-theme="spring"] .spring-house-window { position: absolute; top: 12px; right: 9px; width: 13px; height: 14px; border: 2px solid #fff0c1; background: #8bc6c0; box-shadow: inset 0 0 0 1px #fff9; }
+		:root[data-theme="spring"] .spring-house-door { position: absolute; bottom: 0; left: 10px; width: 15px; height: 27px; border: 2px solid #9b684d; border-bottom: 0; border-radius: 8px 8px 0 0; background: #bd805b; }
+		:root[data-theme="spring"] .spring-house-door::after { position: absolute; top: 14px; right: 2px; width: 3px; height: 3px; border-radius: 50%; background: #ffe59a; content: ""; }
+		:root[data-theme="spring"] .spring-streetlight { position: absolute; z-index: 4; bottom: 19%; width: 5px; height: 92px; border-radius: 4px 4px 0 0; background: #718b69; }
+		:root[data-theme="spring"] .spring-streetlight::before { position: absolute; top: -7px; left: -7px; width: 17px; height: 12px; border: 2px solid #68805f; border-radius: 6px 6px 3px 3px; background: #ffe29a; box-shadow: 0 0 12px #ffe29a99; content: ""; }
+		:root[data-theme="spring"] .spring-streetlight::after { position: absolute; top: 1px; left: -5px; width: 13px; height: 4px; border-radius: 50%; background: #68805f; content: ""; }
+		:root[data-theme="spring"] .spring-streetlight-left { left: 17%; bottom: 8%; transform: scale(.78); transform-origin: bottom center; }
+		:root[data-theme="spring"] .spring-streetlight-right { right: 17%; bottom: 10%; transform: scale(.9); transform-origin: bottom center; }
+		:root[data-theme="spring"] .spring-bench { left: 29%; bottom: 2%; transform: scale(.8); }
+		:root[data-theme="spring"] .spring-flower { width: 5px; border-radius: 0; background: #438854; box-shadow: none; }
+		:root[data-theme="spring"] .spring-flower::after { background: #75b968; }
+		:root[data-theme="spring"] .spring-flower::before { background: radial-gradient(circle at 50% 50%, #ffc94f 0 14%, transparent 15%), radial-gradient(ellipse at 50% 12%, var(--petal) 0 22%, transparent 23%), radial-gradient(ellipse at 88% 42%, var(--petal) 0 22%, transparent 23%), radial-gradient(ellipse at 70% 88%, var(--petal) 0 22%, transparent 23%), radial-gradient(ellipse at 28% 88%, var(--petal) 0 22%, transparent 23%), radial-gradient(ellipse at 12% 42%, var(--petal) 0 22%, transparent 23%); filter: none; }
+		:root[data-theme="spring"] .flower-one { left: 2%; bottom: 20%; --petal: #fff4cb; }
+		:root[data-theme="spring"] .flower-two { left: 10%; bottom: 22%; --petal: #f395a9; }
+		:root[data-theme="spring"] .flower-three { left: 63%; bottom: 25%; --petal: #fff4cb; }
+		:root[data-theme="spring"] .flower-four { left: 73%; bottom: 24%; --petal: #b695d6; }
+		:root[data-theme="spring"] .flower-five { left: 84%; bottom: 24%; --petal: #f395a9; }
+		:root[data-theme="spring"] .flower-six { left: 94%; bottom: 23%; --petal: #fff4cb; }
+		:root[data-theme="spring"] .spring-bird { position: absolute; z-index: 3; color: #527c76; font: 700 28px/1 var(--sans); }
+		:root[data-theme="spring"] .spring-bird-one { top: 28%; left: 33%; animation: bird-glide 8s ease-in-out infinite alternate; }
+		:root[data-theme="spring"] .spring-bird-two { top: 34%; left: 39%; font-size: 20px; animation: bird-glide 7s -2s ease-in-out infinite alternate-reverse; }
+		:root[data-theme="spring"] .spring-butterfly { z-index: 6; width: 4px; height: 17px; border-radius: 50%; background: #5c547e; font-size: 0; animation: butterfly-float 7s ease-in-out infinite; }
+		:root[data-theme="spring"] .spring-butterfly::before, :root[data-theme="spring"] .spring-butterfly::after { position: absolute; top: 1px; left: -9px; width: 10px; height: 9px; border: 2px solid #7668a6; border-radius: 80% 20% 80% 20%; background: #c3a5e0; content: ""; transform-origin: right center; animation: butterfly-flap .45s ease-in-out infinite alternate; }
+		:root[data-theme="spring"] .spring-butterfly::after { top: 9px; left: -7px; width: 8px; height: 6px; border-color: #d47f9a; background: #f3a1ad; animation-delay: -.2s; }
+		:root[data-theme="spring"] .spring-butterfly-one { top: 56%; left: 46%; }
+		:root[data-theme="spring"] .spring-butterfly-two { top: 68%; left: 72%; animation-delay: -3s; }
+		:root[data-theme="spring"] .spring-butterfly-three { top: 47%; left: 84%; animation-delay: -5s; transform: scale(.72); }
+		:root[data-theme="spring"] .spring-bee { position: absolute; z-index: 6; width: 17px; height: 11px; border: 1px solid #8c642e; border-radius: 50%; background: repeating-linear-gradient(90deg, #ffd65e 0 5px, #594c3b 6px 8px); animation: bee-buzz 5s ease-in-out infinite; }
+		:root[data-theme="spring"] .spring-bee::before { position: absolute; top: -6px; left: 4px; width: 6px; height: 5px; border-radius: 50%; background: #fffdf2; box-shadow: 5px 1px #fffdf2; content: ""; }
+		:root[data-theme="spring"] .spring-bee::after { position: absolute; top: 3px; right: -3px; width: 3px; height: 3px; border-radius: 50%; background: #594c3b; content: ""; }
+		:root[data-theme="spring"] .spring-bee-one { top: 60%; left: 26%; }
+		:root[data-theme="spring"] .spring-bee-two { top: 43%; left: 66%; animation-delay: -2.4s; }
+		:root[data-theme="spring"] .spring-pollen { position: absolute; z-index: 3; width: 5px; height: 5px; border-radius: 50%; background: #ffe08a; animation: pollen-drift 6s ease-in-out infinite alternate; }
+		:root[data-theme="spring"] .pollen-one { top: 48%; left: 18%; }
+		:root[data-theme="spring"] .pollen-two { top: 62%; left: 57%; animation-delay: -2s; }
+		:root[data-theme="spring"] .pollen-three { top: 37%; left: 77%; animation-delay: -4s; }
+		:root[data-theme="rain"] .rain-layer { display: block; }
+		:root[data-theme="rain"] .rain-cloud { display: block; }
+		.site-header, main, footer { position: relative; z-index: 1; }
+		.wrap { width: min(1100px, calc(100% - 48px)); margin-inline: auto; }
+		.site-header { position: sticky; z-index: 20; top: 0; border-bottom: 1px solid var(--line); background: var(--header-bg); backdrop-filter: blur(16px); }
+		.nav-bar { display: flex; min-height: 72px; align-items: center; justify-content: space-between; gap: 24px; }
+		.brand { color: var(--ice); font: 600 13px var(--mono); text-decoration: none; }
+		.brand span { color: var(--ink); }
+		.nav-links { display: flex; align-items: center; gap: 25px; }
+		.nav-links a { color: var(--muted); font-size: 12px; font-weight: 600; text-decoration: none; transition: color .2s ease; }
+		.nav-links a:hover { color: var(--ice-bright); }
+		.nav-links .nav-cta { padding: 10px 14px; border: 1px solid #8fcde880; border-radius: 5px; color: var(--ice); }
+		.nav-tools { display: flex; align-items: center; gap: 9px; }
+		.theme-toggle, .menu-toggle { display: inline-flex; min-height: 40px; align-items: center; justify-content: center; gap: 8px; padding: 0 11px; border: 1px solid var(--line); border-radius: 5px; background: var(--toggle-bg); color: var(--ink); font: 10px var(--mono); cursor: pointer; transition: border-color .2s ease, color .2s ease, background .2s ease; }
+		.theme-toggle:hover { border-color: var(--ice); color: var(--ice-bright); }
+		.theme-icon { font-size: 15px; line-height: 1; }
+		.menu-toggle { display: none; width: 42px; padding: 0; font: 20px var(--sans); }
+
+		.hero { display: grid; min-height: 650px; grid-template-columns: 1.15fr .85fr; align-items: center; gap: 62px; padding-block: 80px 92px; }
+		.hero-copy { animation: enter .8s both; }
+		.status { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 25px; padding: 9px 12px; border: 1px solid #8fcde855; border-radius: 4px; background: #8fcde80d; color: var(--ice-bright); font: 10px var(--mono); }
+		.status::before { width: 7px; height: 7px; border-radius: 50%; background: var(--ice); box-shadow: 0 0 10px #8fcde888; content: ""; animation: pulse 1.8s ease-in-out infinite; }
+		.eyebrow { margin: 0 0 14px; color: var(--ice); font: 10px var(--mono); text-transform: uppercase; }
+		h1 { margin: 0; font-size: clamp(54px, 7vw, 86px); font-weight: 800; letter-spacing: 0; line-height: .98; }
+		h1 span { color: transparent; background: var(--hero-gradient); background-clip: text; -webkit-background-clip: text; text-shadow: 0 0 28px #8fcde82b; }
+		.hero-title { margin: 20px 0 12px; color: var(--snow); font-size: 15px; font-weight: 700; }
+		.hero-copy > p:not(.eyebrow):not(.hero-title) { max-width: 530px; margin: 0; color: var(--muted); font-size: 14px; line-height: 1.9; }
+		.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 27px; }
+		.button { display: inline-flex; min-height: 46px; align-items: center; justify-content: center; gap: 9px; padding: 0 18px; border: 1px solid var(--ice); border-radius: 5px; background: var(--button-gradient); color: var(--button-text); font-size: 12px; font-weight: 700; text-decoration: none; transition: transform .2s ease, box-shadow .2s ease, filter .2s ease; }
+		.button:hover { transform: translateY(-2px); filter: brightness(1.08); box-shadow: 0 8px 28px #8fcde82b; }
+		.button.outline { border-color: var(--line); background: var(--surface); color: var(--ink); }
+		.button.outline:hover { border-color: var(--snow); color: var(--snow); box-shadow: 0 8px 28px #edf5f718; }
+		.button .arrow { font-size: 15px; }
+		.hero-meta { display: flex; flex-wrap: wrap; gap: 17px; margin-top: 28px; color: var(--muted); font: 10px var(--mono); }
+		.hero-meta span::before { margin-right: 7px; color: var(--ice); content: "/"; }
+
+		.portrait-wrap { position: relative; width: min(100%, 340px); justify-self: end; animation: enter .9s .12s both; }
+		.portrait { position: relative; display: flex; aspect-ratio: 3 / 4; min-height: 450px; overflow: hidden; flex-direction: column; align-items: center; justify-content: center; border: 7px solid var(--surface); border-radius: 50%; outline: 2px solid var(--ice); outline-offset: 5px; background: var(--portrait-gradient); box-shadow: 0 20px 55px #0004, 0 0 32px #8fcde822; text-align: center; }
+		.portrait-photo { position: absolute; z-index: 0; inset: 0; width: 100%; height: 100%; border-radius: 50%; object-fit: cover; object-position: center 56%; }
+		.portrait::before { position: absolute; z-index: 2; inset: 15px; border: 1px dashed var(--portrait-frame); border-radius: 50%; content: ""; pointer-events: none; }
+		.portrait::after { position: absolute; z-index: 1; right: -70px; bottom: -92px; width: 235px; height: 235px; border: 34px solid var(--ice); border-radius: 50%; opacity: .14; content: ""; animation: float-ring 8s ease-in-out infinite alternate; pointer-events: none; }
+		.portrait-label { position: absolute; z-index: 3; top: 34px; left: 34px; color: var(--portrait-label); font: 9px var(--mono); text-align: left; }
+		.portrait-label span { display: block; margin-top: 5px; color: var(--ice); }
+		.portrait-initials { position: relative; z-index: 1; color: var(--ice-bright); font-size: 104px; font-weight: 800; line-height: 1; text-shadow: 0 0 30px #8fcde833; }
+		.portrait-hint { position: relative; z-index: 1; margin: 13px 25px 0; color: var(--portrait-hint); font-size: 11px; }
+		.portrait-badge { position: absolute; z-index: 2; right: -18px; top: 26%; padding: 12px 14px; border: 1px solid #edf5f766; border-radius: 5px; background: var(--surface); color: var(--snow); font: 10px var(--mono); box-shadow: 0 8px 30px #0005; }
+		.portrait-note { position: absolute; z-index: 2; bottom: -16px; left: -20px; padding: 12px 15px; border: 1px solid #8fcde866; border-radius: 5px; background: var(--surface); color: var(--ice-bright); font-size: 10px; font-weight: 700; box-shadow: 0 8px 30px #0005; }
+
+		.section { padding-block: 82px; }
+		.section-head { max-width: 650px; margin-bottom: 32px; }
+		.section-head h2 { margin: 0; font-size: 34px; font-weight: 800; letter-spacing: 0; line-height: 1.15; }
+		.section-head p:not(.eyebrow) { max-width: 520px; margin: 12px 0 0; color: var(--muted); font-size: 13px; line-height: 1.8; }
+		.about-section { border-block: 1px solid var(--line); background: var(--section-bg); }
+		.about-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 70px; align-items: start; }
+		.about-copy p { margin: 0 0 16px; color: var(--muted); font-size: 13px; line-height: 1.9; }
+		.about-callout { margin-top: 25px; padding: 16px 18px; border-left: 2px solid var(--ice); background: var(--callout-bg); color: var(--ink); font-size: 12px; line-height: 1.75; }
+		.focus-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 24px; }
+		.focus-item { padding-top: 14px; border-top: 1px solid var(--line); }
+		.focus-item strong { display: block; color: var(--ice-bright); font: 600 15px var(--mono); }
+		.focus-item span { display: block; margin-top: 6px; color: var(--muted); font-size: 10px; }
+
+		.skills-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+		.skill { min-height: 145px; padding: 18px; border: 1px solid var(--line); border-radius: 5px; background: var(--surface); transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease; }
+		.skill:hover { transform: translateY(-4px); border-color: #8fcde888; box-shadow: 0 10px 28px #8fcde810; }
+		.skill:nth-child(even):hover { border-color: #edf5f788; box-shadow: 0 10px 28px #edf5f710; }
+		.skill-icon { display: grid; width: 35px; height: 35px; place-items: center; border: 1px solid #edf5f755; border-radius: 5px; background: #edf5f710; color: var(--snow); font: 12px var(--mono); }
+		.skill:nth-child(even) .skill-icon { border-color: #8fcde855; background: #8fcde810; color: var(--ice); }
+		.skill h3 { margin: 15px 0 5px; font-size: 12px; }
+		.skill p { margin: 0; color: var(--muted); font-size: 10px; line-height: 1.6; }
+		.tool-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 20px; }
+		.tool-label { margin-right: 5px; color: var(--muted); font: 10px var(--mono); }
+		.tool { padding: 6px 9px; border: 1px solid var(--line); border-radius: 4px; color: #d7e0e3; font: 9px var(--mono); }
+
+		.projects-section { border-block: 1px solid var(--line); background: var(--section-bg); }
+		.project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+		.project { overflow: hidden; border: 1px solid var(--line); border-radius: 5px; background: var(--surface); transition: transform .25s ease, border-color .25s ease; }
+		.project:hover { transform: translateY(-4px); border-color: #8fcde888; }
+		.project-banner { display: flex; min-height: 155px; align-items: end; justify-content: space-between; padding: 18px 20px; background: var(--project-gradient); color: var(--ice); }
+		.project:nth-child(2) .project-banner { background: var(--project-alt-gradient); color: var(--snow); }
+		.project-banner span { font: 9px var(--mono); }
+		.project-banner strong { font-size: 42px; font-weight: 800; letter-spacing: 0; line-height: 1; }
+		.project-content { padding: 20px; }
+		.project-type { color: var(--ice-bright); font: 9px var(--mono); text-transform: uppercase; }
+		.project h3 { margin: 8px 0; font-size: 18px; font-weight: 700; }
+		.project p { min-height: 43px; margin: 0; color: var(--muted); font-size: 11px; line-height: 1.75; }
+		.project-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-top: 17px; padding-top: 13px; border-top: 1px solid var(--line); }
+		.tags { display: flex; flex-wrap: wrap; gap: 8px; color: var(--ice); font: 9px var(--mono); }
+		.project-link { color: var(--ice-bright); font-size: 10px; font-weight: 700; text-decoration: none; }
+		.project-link:hover { color: var(--snow); }
+
+		.cert-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; align-items: start; }
+		.cert-item { min-width: 0; }
+		.cert-image { display: grid; min-height: 190px; aspect-ratio: 1.42; place-items: center; overflow: hidden; border: 1px solid var(--line); border-radius: 6px; background: var(--certificate-bg); transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease; }
+		.cert-image:hover { transform: translateY(-4px); border-color: var(--ice); box-shadow: 0 10px 26px #8fcde822; }
+		.cert-image img { display: block; width: 100%; height: 100%; object-fit: contain; }
+		.cert-item-portrait { grid-column: 2 / span 2; justify-self: center; width: min(100%, 280px); }
+		.cert-image-portrait { aspect-ratio: 3 / 4; }
+
+		.contact-section { position: relative; overflow: hidden; border-block: 1px solid var(--line); background: var(--surface); }
+		.contact-section::after { position: absolute; top: -115px; right: 8%; width: 220px; height: 220px; border: 22px solid var(--ice); opacity: .48; content: ""; transform: rotate(18deg); animation: contact-drift 9s ease-in-out infinite alternate; }
+		.contact-inner { position: relative; z-index: 1; display: flex; align-items: end; justify-content: space-between; gap: 30px; }
+		.contact-inner h2 { max-width: 560px; margin: 0; font-size: 38px; font-weight: 800; line-height: 1.12; }
+		.contact-inner > div > p:last-child { max-width: 440px; margin: 12px 0 0; color: var(--muted); font-size: 12px; line-height: 1.8; }
+		.contact-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+		.contact-links a { color: var(--ice); font: 10px var(--mono); text-decoration: none; }
+		.contact-links a:hover { color: var(--snow); }
+		.footer { display: flex; min-height: 70px; align-items: center; justify-content: space-between; gap: 18px; color: var(--muted); font-size: 9px; }
+		.footer-links { display: flex; gap: 16px; }
+		.footer-links a { text-decoration: none; }
+		.footer-links a:hover { color: var(--ice-bright); }
+
+		.reveal { opacity: 1; transform: none; }
+		.js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .65s ease, transform .65s ease; }
+		.js .reveal.visible { opacity: 1; transform: translateY(0); }
+		.js .reveal-delay { transition-delay: .12s; }
+		.stack-marquee { overflow: hidden; border-block: 1px solid var(--line); background: var(--ticker-gradient); }
+		.marquee-track { display: flex; width: max-content; animation: marquee 32s linear infinite; }
+		.marquee-group { display: flex; align-items: center; gap: 32px; padding: 13px 16px; color: var(--muted); font: 9px var(--mono); white-space: nowrap; }
+		.marquee-group span::before { margin-right: 32px; color: var(--ice); content: "❄"; }
+		.marquee-group span:first-child::before { content: ""; margin: 0; }
+		.stack-marquee:hover .marquee-track { animation-play-state: paused; }
+		@keyframes enter { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+		@keyframes light-sweep { to { transform: translateX(360vw); } }
+		@keyframes pulse { 50% { box-shadow: 0 0 0 6px #8fcde815, 0 0 16px var(--ice); } }
+		@keyframes snowfall { 0% { opacity: 0; transform: translate3d(0, -5vh, 0) rotate(0); } 12%, 82% { opacity: .7; } 100% { opacity: 0; transform: translate3d(24px, 110vh, 0) rotate(300deg); } }
+		@keyframes rainfall { to { background-position: -42px 120px; } }
+		@keyframes streetlamp-glow { to { filter: brightness(1.22); box-shadow: 0 0 16px #f5d58dba, 0 0 42px #f5d58d77; } }
+		@keyframes puddle-shimmer { to { opacity: .48; transform: scaleX(1.18); } }
+		@keyframes walk-cycle { to { translate: 0 -3px; } }
+		@keyframes leg-step { to { transform: rotate(15deg); } }
+		@keyframes umbrella-tilt { to { rotate: -4deg; } }
+		@keyframes ripple-expand { 0% { opacity: .75; transform: scale(.55); } 100% { opacity: 0; transform: scale(1.65); } }
+		@keyframes cloud-drift { to { transform: translateX(calc(100vw + 640px)); } }
+		@keyframes petal-fall { 0% { opacity: 0; transform: translate3d(0, -6vh, 0) rotate(0); } 12%, 84% { opacity: .75; } 50% { transform: translate3d(-18px, 52vh, 0) rotate(150deg); } 100% { opacity: 0; transform: translate3d(22px, 110vh, 0) rotate(320deg); } }
+		@keyframes leaf-fall { 0% { opacity: 0; transform: translate3d(0, -6vh, 0) rotate(-30deg) scale(.85); } 12%, 84% { opacity: .9; } 50% { transform: translate3d(24px, 52vh, 0) rotate(170deg) scale(1); } 100% { opacity: 0; transform: translate3d(-18px, 110vh, 0) rotate(340deg) scale(.8); } }
+		@keyframes float-ring { to { transform: translate(-14px, -12px) rotate(18deg); } }
+		@keyframes contact-drift { to { transform: translate(-12px, 18px) rotate(30deg); } }
+		@keyframes marquee { to { transform: translateX(-50%); } }
+		@keyframes canopy-sway { to { transform: rotate(3deg) scale(1.02); } }
+		@keyframes flower-sway { to { transform: translateY(-5px) rotate(8deg); } }
+		@keyframes butterfly-float { 50% { transform: translate(24px, -18px) rotate(12deg); } }
+		@keyframes butterfly-flap { to { transform: scaleX(.42) rotate(-12deg); } }
+		@keyframes bird-glide { to { translate: 24px -8px; } }
+		@keyframes bee-buzz { 50% { translate: 16px -10px; rotate: 8deg; } }
+		@keyframes pollen-drift { to { translate: 9px -13px; opacity: .45; } }
+		@keyframes spring-cloud-drift { to { translate: calc(100vw + 420px) 0; } }
+		@keyframes sun-float { to { translate: 0 -5px; filter: brightness(1.06); } }
+		@keyframes sun-rays { to { rotate: 360deg; } }
+		@keyframes pine-sway { from { rotate: -1deg; } to { rotate: 1deg; filter: drop-shadow(10px 11px 7px #233b4938); } }
+		@keyframes snowman-bob { to { translate: 0 -4px; } }
+		@keyframes scarf-flutter { to { transform: rotate(9deg); } }
+		@keyframes chimney-smoke { 0% { opacity: 0; transform: translate(0, 8px) scale(.55); } 20% { opacity: .62; } 100% { opacity: 0; transform: translate(20px, -55px) scale(1.8); } }
+		@keyframes window-glow { to { filter: brightness(1.25); box-shadow: 0 0 20px #f5d58dbb, inset 0 0 7px #fff7c5; } }
+		@keyframes sparkle { to { opacity: .18; transform: scale(.6) rotate(40deg); } }
+		@keyframes aurora-flow { to { transform: translateX(4%) skewY(-4deg) scaleY(1.15); filter: blur(18px); } }
+		@keyframes star-twinkle { to { opacity: .45; } }
+
+		@media (max-width: 760px) {
+			.wrap { width: min(100% - 36px, 560px); }
+			.nav-bar { min-height: 64px; }
+			.menu-toggle { display: grid; place-items: center; }
+			.nav-tools { margin-left: auto; }
+			.nav-links { position: absolute; top: 100%; right: 0; left: 0; display: none; align-items: stretch; gap: 0; padding: 8px 20px 18px; border-bottom: 1px solid var(--line); background: var(--header-bg); }
+			.nav-links.open { display: flex; flex-direction: column; }
+			.nav-links a { padding: 12px 4px; border-bottom: 1px solid var(--line); }
+			.nav-links .nav-cta { margin-top: 10px; padding: 11px; border: 1px solid #8fcde880; text-align: center; }
+			.hero { min-height: auto; grid-template-columns: 1fr; gap: 45px; padding-block: 66px 74px; }
+			.portrait-wrap { width: min(84%, 340px); justify-self: center; }
+			.portrait { min-height: 390px; }
+			.about-grid { grid-template-columns: 1fr; gap: 24px; }
+			.section { padding-block: 62px; }
+			.skills-grid { grid-template-columns: repeat(2, 1fr); }
+			.project-grid { grid-template-columns: 1fr; }
+			.cert-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+			.cert-item-portrait { grid-column: 1 / -1; }
+			.contact-inner { align-items: start; flex-direction: column; }
+			.contact-section::after { right: -100px; }
+			.marquee-group { gap: 22px; }
+			.marquee-group span::before { margin-right: 22px; }
+		}
+		@media (max-width: 430px) {
+			.wrap { width: calc(100% - 30px); }
+			.status { font-size: 8px; }
+			.hero-actions { align-items: stretch; flex-direction: column; }
+			.hero-actions .button { width: 100%; }
+			.portrait { min-height: 340px; }
+			.portrait-badge { right: -10px; }
+			.portrait-note { left: -10px; }
+			.section-head h2 { font-size: 29px; }
+			.skills-grid { gap: 9px; }
+			.skill { min-height: 135px; padding: 14px; }
+			.focus-list { gap: 8px; }
+			.focus-item span { font-size: 9px; }
+			.cert-grid { grid-template-columns: 1fr; }
+			.cert-item-portrait { grid-column: auto; width: min(100%, 280px); }
+			.contact-inner h2 { font-size: 31px; }
+			.footer { align-items: flex-start; flex-direction: column; justify-content: center; padding-block: 16px; }
+		}
+		@media (prefers-reduced-motion: reduce) {
+			*, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+			.js .reveal { opacity: 1; transform: none; }
+			.ambient { display: none; }
+			.marquee-track { animation: none; }
+		}
+	</style>
+</head>
+<body>
+	<div class="scroll-progress" aria-hidden="true"></div>
+	<div class="ambient" aria-hidden="true">
+		<div class="rain-layer"><span class="rain-cloud"></span><span class="rain-cloud"></span></div>
+		<div class="rain-street">
+			<span class="rain-skyline"></span><span class="rain-ground"></span><span class="rain-road"></span>
+			<span class="rain-building rain-building-one"></span><span class="rain-building rain-building-two"></span>
+			<span class="rain-building rain-building-three"></span><span class="rain-building rain-building-four"></span>
+			<span class="rain-building rain-building-five"></span><span class="rain-building rain-building-six"></span>
+			<span class="rain-building rain-building-seven"></span><span class="rain-building rain-building-eight"></span>
+			<span class="rain-reflection rain-reflection-one"></span><span class="rain-reflection rain-reflection-two"></span>
+			<span class="rain-lamp rain-lamp-left"></span><span class="rain-lamp rain-lamp-right"></span>
+			<div class="rain-bench"><span class="rain-bench-back"></span><span class="rain-bench-seat"></span><span class="rain-bench-leg"></span><span class="rain-bench-leg rain-bench-leg-two"></span><span class="rain-bench-arm"></span><span class="rain-bench-arm rain-bench-arm-two"></span></div>
+			<div class="rain-person rain-person-one">
+				<span class="rain-umbrella"></span><span class="rain-person-head"></span><span class="rain-person-body"></span>
+				<span class="rain-person-arm"></span><span class="rain-person-arm rain-person-arm-two"></span>
+				<span class="rain-person-leg"></span><span class="rain-person-leg rain-person-leg-two"></span>
+			</div>
+			<div class="rain-person rain-person-two">
+				<span class="rain-umbrella"></span><span class="rain-person-head"></span><span class="rain-person-body"></span>
+				<span class="rain-person-arm"></span><span class="rain-person-arm rain-person-arm-two"></span>
+				<span class="rain-person-leg"></span><span class="rain-person-leg rain-person-leg-two"></span>
+			</div>
+			<span class="rain-ripple rain-ripple-one"></span><span class="rain-ripple rain-ripple-two"></span><span class="rain-ripple rain-ripple-three"></span>
+		</div>
+		<div class="winter-scene">
+			<div class="winter-night-sky"></div><span class="winter-moon"></span>
+			<span class="winter-mountain winter-mountain-one"></span><span class="winter-mountain winter-mountain-two"></span><span class="winter-mountain winter-mountain-three"></span>
+			<span class="winter-hill winter-hill-back"></span><span class="winter-hill winter-hill-mid"></span><span class="winter-hill winter-hill-front"></span>
+			<div class="winter-pine winter-pine-left"><span class="winter-pine-trunk"></span><span class="winter-branch winter-branch-one"></span><span class="winter-branch winter-branch-two"></span><span class="winter-branch winter-branch-three"></span></div>
+			<div class="winter-pine winter-pine-mid"><span class="winter-pine-trunk"></span><span class="winter-branch winter-branch-one"></span><span class="winter-branch winter-branch-two"></span><span class="winter-branch winter-branch-three"></span></div>
+			<div class="winter-pine winter-pine-right"><span class="winter-pine-trunk"></span><span class="winter-branch winter-branch-one"></span><span class="winter-branch winter-branch-two"></span><span class="winter-branch winter-branch-three"></span></div>
+			<div class="winter-pine winter-pine-back"><span class="winter-pine-trunk"></span><span class="winter-branch winter-branch-one"></span><span class="winter-branch winter-branch-two"></span><span class="winter-branch winter-branch-three"></span></div>
+			<div class="winter-cabin"><span class="winter-cabin-window"></span><span class="winter-cabin-door"></span></div>
+			<div class="winter-igloo"><span class="winter-igloo-shell"></span><span class="winter-igloo-door"></span><span class="winter-igloo-glow"></span></div>
+			<span class="winter-smoke"></span><span class="winter-smoke winter-smoke-two"></span>
+			<div class="winter-snowman"><span class="snowman-arm"></span><span class="snowman-base"></span><span class="snowman-body"></span><span class="snowman-head"></span><span class="snowman-scarf"></span></div>
+			<span class="winter-sparkle winter-sparkle-one">✦</span><span class="winter-sparkle winter-sparkle-two">✧</span><span class="winter-sparkle winter-sparkle-three">✦</span>
+		</div>
+		<div class="spring-garden">
+			<span class="spring-hill spring-hill-back"></span><span class="spring-hill spring-hill-mid"></span><span class="spring-hill spring-hill-front"></span>
+			<span class="spring-lawn"></span>
+			<span class="spring-sun"></span><span class="spring-cloud"></span><span class="spring-cloud spring-cloud-two"></span>
+			<span class="spring-cloud spring-cloud-three"></span><span class="spring-cloud spring-cloud-four"></span>
+			<div class="spring-tree spring-tree-left"><span class="spring-trunk"></span><span class="spring-canopy"></span><span class="spring-canopy spring-canopy-two"></span><span class="spring-canopy spring-canopy-three"></span></div>
+			<div class="spring-tree spring-tree-right"><span class="spring-trunk"></span><span class="spring-canopy"></span><span class="spring-canopy spring-canopy-two"></span><span class="spring-canopy spring-canopy-three"></span></div>
+			<div class="spring-tree spring-tree-center"><span class="spring-trunk"></span><span class="spring-canopy"></span><span class="spring-canopy spring-canopy-two"></span><span class="spring-canopy spring-canopy-three"></span></div>
+			<div class="spring-house spring-house-left"><span class="spring-house-window"></span><span class="spring-house-door"></span></div>
+			<div class="spring-house spring-house-right"><span class="spring-house-window"></span><span class="spring-house-door"></span></div>
+			<span class="spring-streetlight spring-streetlight-left"></span><span class="spring-streetlight spring-streetlight-right"></span>
+			<span class="spring-bushes spring-bush-left"></span><span class="spring-bushes spring-bush-right"></span>
+			<span class="spring-bench"></span>
+			<span class="spring-mushroom"></span><span class="spring-mushroom spring-mushroom-two"></span>
+			<span class="spring-grass-blade"></span><span class="spring-grass-blade"></span><span class="spring-grass-blade"></span><span class="spring-grass-blade"></span>
+			<span class="spring-grass-blade"></span><span class="spring-grass-blade"></span><span class="spring-grass-blade"></span><span class="spring-grass-blade"></span>
+			<span class="spring-path"></span>
+			<span class="spring-flower flower-one"></span><span class="spring-flower flower-two"></span><span class="spring-flower flower-three"></span>
+			<span class="spring-flower flower-four"></span><span class="spring-flower flower-five"></span><span class="spring-flower flower-six"></span>
+			<span class="spring-bird spring-bird-one" aria-hidden="true">⌁</span><span class="spring-bird spring-bird-two" aria-hidden="true">⌁</span>
+			<span class="spring-butterfly spring-butterfly-one" aria-hidden="true"></span><span class="spring-butterfly spring-butterfly-two" aria-hidden="true"></span><span class="spring-butterfly spring-butterfly-three" aria-hidden="true"></span>
+			<span class="spring-bee spring-bee-one" aria-hidden="true"></span><span class="spring-bee spring-bee-two" aria-hidden="true"></span>
+			<span class="spring-pollen pollen-one" aria-hidden="true"></span><span class="spring-pollen pollen-two" aria-hidden="true"></span><span class="spring-pollen pollen-three" aria-hidden="true"></span>
+		</div>
+		<span class="snowflake" style="left:4%;animation-delay:-3s">❄</span><span class="snowflake" style="left:9%;font-size:10px;animation-delay:-11s;animation-duration:19s">❄</span>
+		<span class="snowflake" style="left:14%;font-size:18px;animation-delay:-7s;animation-duration:17s">❄</span><span class="snowflake" style="left:19%;font-size:11px;animation-delay:-14s">❄</span>
+		<span class="snowflake" style="left:24%;font-size:16px;animation-delay:-5s;animation-duration:20s">❄</span><span class="snowflake" style="left:29%;font-size:10px;animation-delay:-9s">❄</span>
+		<span class="snowflake" style="left:34%;font-size:17px;animation-delay:-16s;animation-duration:18s">❄</span><span class="snowflake" style="left:39%;font-size:12px;animation-delay:-2s;animation-duration:21s">❄</span>
+		<span class="snowflake" style="left:44%;font-size:9px;animation-delay:-12s;animation-duration:18s">❄</span><span class="snowflake" style="left:49%;font-size:15px;animation-delay:-6s;animation-duration:22s">❄</span>
+		<span class="snowflake" style="left:54%;font-size:11px;animation-delay:-17s">❄</span><span class="snowflake" style="left:59%;font-size:18px;animation-delay:-4s;animation-duration:19s">❄</span>
+		<span class="snowflake" style="left:64%;font-size:10px;animation-delay:-13s">❄</span><span class="snowflake" style="left:69%;font-size:14px;animation-delay:-8s;animation-duration:20s">❄</span>
+		<span class="snowflake" style="left:74%;font-size:9px;animation-delay:-18s">❄</span><span class="snowflake" style="left:79%;font-size:17px;animation-delay:-10s;animation-duration:21s">❄</span>
+		<span class="snowflake" style="left:84%;font-size:11px;animation-delay:-1s">❄</span><span class="snowflake" style="left:89%;font-size:15px;animation-delay:-15s;animation-duration:18s">❄</span>
+		<span class="snowflake" style="left:94%;font-size:10px;animation-delay:-7s">❄</span><span class="snowflake" style="left:98%;font-size:16px;animation-delay:-19s;animation-duration:22s">❄</span>
+		<span class="snowflake" style="left:27%;font-size:8px;animation-delay:-20s;animation-duration:23s">❄</span><span class="snowflake" style="left:47%;font-size:12px;animation-delay:-22s;animation-duration:24s">❄</span>
+		<span class="snowflake" style="left:72%;font-size:8px;animation-delay:-23s;animation-duration:25s">❄</span><span class="snowflake" style="left:91%;font-size:13px;animation-delay:-21s;animation-duration:23s">❄</span>
+		<span class="seasonal-petal" style="left:12%;animation-delay:-3s">✿</span><span class="seasonal-petal" style="left:28%;font-size:12px;animation-delay:-12s">✿</span>
+		<span class="seasonal-petal" style="left:43%;font-size:20px;animation-delay:-7s">✿</span><span class="seasonal-petal" style="left:57%;font-size:13px;animation-delay:-15s">✿</span>
+		<span class="seasonal-petal" style="left:69%;font-size:18px;animation-delay:-9s">✿</span><span class="seasonal-petal" style="left:81%;font-size:11px;animation-delay:-5s">✿</span>
+		<span class="seasonal-petal" style="left:94%;font-size:17px;animation-delay:-14s">✿</span><span class="seasonal-petal" style="left:35%;font-size:10px;animation-delay:-18s">✿</span>
+		<span class="seasonal-leaf" style="left:6%;animation-delay:-8s">🍃</span><span class="seasonal-leaf" style="left:20%;font-size:13px;animation-delay:-2s">🍃</span>
+		<span class="seasonal-leaf" style="left:37%;font-size:21px;animation-delay:-14s">🍃</span><span class="seasonal-leaf" style="left:53%;font-size:15px;animation-delay:-5s">🍃</span>
+		<span class="seasonal-leaf" style="left:66%;font-size:19px;animation-delay:-17s">🍃</span><span class="seasonal-leaf" style="left:78%;font-size:12px;animation-delay:-10s">🍃</span>
+		<span class="seasonal-leaf" style="left:90%;font-size:17px;animation-delay:-4s">🍃</span><span class="seasonal-leaf" style="left:47%;font-size:11px;animation-delay:-20s">🍃</span>
+	</div>
+
+	<header class="site-header">
+		<nav class="wrap nav-bar" aria-label="Navigasi utama">
+			<a class="brand" href="#home">&lt;Amelia<span>.dev</span> /&gt;</a>
+			<div class="nav-links" id="nav-links">
+				<a href="#about">Tentang</a><a href="#skills">Keahlian</a><a href="#projects">Proyek</a><a href="#certificates">Sertifikat</a>
+				<a class="nav-cta" href="#contact">Kontak <span aria-hidden="true">↗</span></a>
+			</div>
+			<div class="nav-tools">
+				<button class="theme-toggle" type="button" aria-label="Ganti mode warna" title="Ganti mode warna"><span class="theme-icon" aria-hidden="true">☀</span><span class="theme-label">Salju Malam</span></button>
+				<button class="menu-toggle" type="button" aria-label="Buka menu" aria-expanded="false" aria-controls="nav-links">☰</button>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<section class="wrap hero" id="home" aria-labelledby="hero-title">
+			<div class="hero-copy">
+				<div class="status">FOKUS: PENGEMBANGAN APLIKASI WEB</div>
+				<p class="eyebrow">WEB DEVELOPER · APPLICATION DEVELOPMENT</p>
+				<h1 id="hero-title">AMELIA<br><span>ZULFA</span></h1>
+				<p class="hero-title">Fokus membangun aplikasi. Peka terhadap pengalaman pengguna.</p>
+				<p>Saya pernah membuat landing page dan aplikasi web, serta mengembangkan fitur dari frontend hingga backend. Saya menggunakan HTML dasar, CSS, JavaScript, PHP, Laravel, dan database untuk membuat website yang responsif dan mudah digunakan.</p>
+				<div class="hero-actions"><a class="button" href="#projects">Lihat karya <span class="arrow" aria-hidden="true">↘</span></a><a class="button outline" href="#contact">Hubungi saya <span class="arrow" aria-hidden="true">↗</span></a></div>
+				<div class="hero-meta"><span>WEB DEVELOPMENT</span><span>LARAVEL & VUE</span><span>UI/UX</span></div>
+			</div>
+			<div class="portrait-wrap">
+				<div class="portrait">
+					<span class="portrait-label">PROFILE / PHOTO<span>01 — AMELIA ZULFA</span></span>
+					<img class="portrait-photo" src="Amelia_Zulfa.jpeg" alt="Foto profil Amelia Zulfa" fetchpriority="high">
+				</div>
+				<div class="portrait-badge">&lt; WEB DEVELOPER /&gt;</div>
+				<div class="portrait-note">✦ APP DEVELOPMENT · CLEAN CODE</div>
+			</div>
+		</section>
+
+		<div class="stack-marquee" aria-hidden="true"><div class="marquee-track">
+			<div class="marquee-group"><span>LARAVEL</span><span>VUE.JS</span><span>INERTIA</span><span>UI/UX DESIGN</span><span>FIGMA</span><span>JAVASCRIPT</span></div>
+			<div class="marquee-group"><span>LARAVEL</span><span>VUE.JS</span><span>INERTIA</span><span>UI/UX DESIGN</span><span>FIGMA</span><span>JAVASCRIPT</span></div>
+		</div></div>
+
+		<section class="about-section" id="about"><div class="wrap section about-grid">
+			<div class="section-head reveal"><p class="eyebrow">01 / TENTANG SAYA</p><h2>Teknologi yang terasa dekat dengan manusia.</h2></div>
+			<div class="about-copy reveal reveal-delay">
+				<p>Saya Amelia Zulfa, web developer yang pernah membuat landing page dan aplikasi web. Saya menikmati proses menerjemahkan kebutuhan menjadi halaman dan fitur yang responsif, dari tampilan frontend hingga struktur backend.</p>
+				<p>Saya memiliki dasar HTML, JavaScript, PHP, Laravel, MySQL, dan pengelolaan database. Saya juga menggunakan Bootstrap, Vue.js, serta Inertia.js, dengan pemahaman UI/UX sebagai pendukung agar antarmuka mudah dipahami.</p>
+				<div class="about-callout">“Saya berfokus membangun aplikasi yang bermanfaat, terstruktur, dan mudah digunakan.”</div>
+				<div class="focus-list"><div class="focus-item"><strong>APP DEV</strong><span>Fitur dan integrasi</span></div><div class="focus-item"><strong>LARAVEL</strong><span>Backend aplikasi</span></div><div class="focus-item"><strong>UI/UX</strong><span>Antarmuka pendukung</span></div></div>
+			</div>
+		</div></section>
+
+		<section class="wrap section" id="skills">
+			<div class="section-head reveal"><p class="eyebrow">02 / KEAHLIAN</p><h2>Skills & technologies</h2><p>Dasar frontend dan backend, database, serta tools untuk membuat landing page dan aplikasi web.</p></div>
+			<div class="skills-grid">
+				<article class="skill reveal"><span class="skill-icon">UX</span><h3>UI/UX Design</h3><p>Wireframe, prototyping, user flow</p></article>
+				<article class="skill reveal reveal-delay"><span class="skill-icon">&lt;/&gt;</span><h3>HTML & CSS</h3><p>Dasar struktur halaman dan layout responsif</p></article>
+				<article class="skill reveal"><span class="skill-icon">JS</span><h3>JavaScript</h3><p>Interaksi dan logika frontend</p></article>
+				<article class="skill reveal reveal-delay"><span class="skill-icon">PHP</span><h3>PHP</h3><p>Dasar pemrograman backend</p></article>
+				<article class="skill reveal"><span class="skill-icon">L</span><h3>Laravel</h3><p>Framework untuk pengembangan aplikasi web</p></article>
+				<article class="skill reveal reveal-delay"><span class="skill-icon">DB</span><h3>MySQL & Database</h3><p>Dasar pengelolaan data aplikasi</p></article>
+				<article class="skill reveal"><span class="skill-icon">B</span><h3>Bootstrap</h3><p>Komponen dan layout website responsif</p></article>
+				<article class="skill reveal reveal-delay"><span class="skill-icon">LP</span><h3>Landing Page</h3><p>Pengalaman membuat halaman web informatif</p></article>
+				<article class="skill reveal"><span class="skill-icon">V</span><h3>Vue.js</h3><p>Komponen frontend interaktif</p></article>
+				<article class="skill reveal reveal-delay"><span class="skill-icon">↔</span><h3>Inertia.js</h3><p>Penghubung frontend dan backend</p></article>
+				<article class="skill reveal"><span class="skill-icon">F</span><h3>Figma</h3><p>Desain antarmuka dan prototype</p></article>
+			</div>
+			<div class="tool-row reveal"><span class="tool-label">ALSO WORK WITH</span><span class="tool">SQLite</span><span class="tool">Tailwind CSS</span><span class="tool">GitHub</span><span class="tool">Responsive Design</span></div>
+		</section>
+
+		<section class="projects-section" id="projects"><div class="wrap section">
+			<div class="section-head reveal"><p class="eyebrow">03 / KARYA TERPILIH</p><h2>Proyek pilihan.</h2><p>Eksplorasi pengembangan web dan desain yang mengutamakan fungsi serta pengalaman pengguna.</p></div>
+			<div class="project-grid">
+				<article class="project reveal"><div class="project-banner" aria-hidden="true"><span>FULL-STACK APPLICATION</span><strong>CRUD</strong></div><div class="project-content"><span class="project-type">WEB DEVELOPMENT</span><h3>Laravel Inertia CRUD App</h3><p>Aplikasi pengelolaan data dengan alur tambah, lihat, ubah, dan hapus yang dibuat agar praktis digunakan.</p><div class="project-foot"><div class="tags"><span>#Laravel</span><span>#Vue</span><span>#Inertia</span><span>#SQLite</span></div><a class="project-link" href="https://github.com/ameliazulfa" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div></article>
+				<article class="project reveal reveal-delay"><div class="project-banner" aria-hidden="true"><span>PERSONAL WEBSITE</span><strong>DEV</strong></div><div class="project-content"><span class="project-type">DESIGN & FRONTEND</span><h3>Portfolio Web Developer</h3><p>Website portofolio responsif untuk menampilkan profil, keahlian, proyek, dan sertifikat dalam satu halaman.</p><div class="project-foot"><div class="tags"><span>#HTML</span><span>#CSS</span><span>#JavaScript</span><span>#UIUX</span></div><a class="project-link" href="https://github.com/ameliazulfa" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div></article>
+			</div>
+		</div></section>
+
+		<section class="wrap section" id="certificates">
+			<div class="section-head reveal"><p class="eyebrow">04 / SERTIFIKAT</p><h2>Sertifikat & pencapaian.</h2><p>Beberapa sertifikat dan pencapaian yang saya raih.</p></div>
+			<div class="cert-grid">
+				<article class="cert-item reveal"><a class="cert-image" href="osis.jpeg" target="_blank" rel="noopener noreferrer"><img src="osis.jpeg" alt="Sertifikat penghargaan Amelia Zulfa sebagai Anggota Seksi Bidang VI OSIS SMKN 8 Jember, masa bakti 2025–2026" loading="lazy"></a><p class="cert-name">Anggota Seksi Bidang VI OSIS</p></article>
+				<article class="cert-item reveal reveal-delay"><a class="cert-image" href="rohis.jpeg" target="_blank" rel="noopener noreferrer"><img src="rohis.jpeg" alt="Sertifikat peserta kegiatan Bahan Muharram 1448 H" loading="lazy"></a><p class="cert-name">Peserta Bahan Muharram 1448 H</p></article>
+				<article class="cert-item reveal"><a class="cert-image" href="semester%201.jpeg" target="_blank" rel="noopener noreferrer"><img src="semester%201.jpeg" alt="Sertifikat kelulusan Pemrograman Fundamental Menggunakan Java, Semester Ganjil 2025/2026" loading="lazy"></a><p class="cert-name">Pemrograman Fundamental Java</p></article>
+				<article class="cert-item reveal reveal-delay"><a class="cert-image" href="semester%202.jpeg" target="_blank" rel="noopener noreferrer"><img src="semester%202.jpeg" alt="Sertifikat kelulusan Pemrograman Web Front End dengan Bootstrap dan PHP Native, Semester Genap 2025/2026" loading="lazy"></a><p class="cert-name">Pemrograman Web Front End</p></article>
+				<article class="cert-item cert-item-portrait reveal"><a class="cert-image cert-image-portrait" href="pramuka.jpeg" target="_blank" rel="noopener noreferrer"><img src="pramuka.jpeg" alt="Sertifikat partisipasi Amelia Zulfa dalam Jamboree On The Air dan Jamboree On The Internet 2025" loading="lazy"></a><p class="cert-name">JOTA-JOTI 2025</p></article>
+			</div>
+		</section>
+
+		<section class="contact-section" id="contact"><div class="wrap section contact-inner reveal">
+			<div><p class="eyebrow">05 / KONTAK</p><h2>Saya siap belajar dan berkontribusi.</h2><p>Saya tertarik berkontribusi dalam pengembangan aplikasi web dan terus belajar di lingkungan kerja profesional.</p><div class="contact-links"><a href="https://github.com/ameliazulfa" target="_blank" rel="noopener noreferrer">GITHUB ↗</a><a href="https://www.tiktok.com/search?q=sp_liaa" target="_blank" rel="noopener noreferrer">TIKTOK ↗</a><a href="https://wa.me/6285748322103" target="_blank" rel="noopener noreferrer">WHATSAPP ↗</a></div></div>
+			<a class="button" href="https://wa.me/6285748322103" target="_blank" rel="noopener noreferrer">Hubungi via WhatsApp <span class="arrow" aria-hidden="true">↗</span></a>
+		</div></section>
+	</main>
+
+	<footer class="wrap footer"><span>© 2026 Amelia Zulfa. Dibuat dengan sepenuh hati.</span><div class="footer-links"><a href="#home">Kembali ke atas ↑</a></div></footer>
+
+	<script>
+		const themeButton = document.querySelector(".theme-toggle");
+		const themeIcon = document.querySelector(".theme-icon");
+		const themeLabel = document.querySelector(".theme-label");
+		const themeMeta = document.querySelector('meta[name="theme-color"]');
+		const themeModes = ["dark", "light", "spring", "rain"];
+		const themeNames = { dark: "Salju Malam", light: "Salju Siang", spring: "Musim Semi", rain: "Hujan" };
+		let savedTheme = "dark";
+		try {
+			const storedTheme = localStorage.getItem("portfolio-theme");
+			if (themeModes.includes(storedTheme)) savedTheme = storedTheme;
+		} catch {}
+
+		const applyTheme = (theme, persist = false) => {
+			document.documentElement.dataset.theme = theme;
+			themeButton.setAttribute("aria-label", `Mode saat ini ${themeNames[theme]}. Klik untuk mengganti mode.`);
+			themeButton.title = `Mode saat ini: ${themeNames[theme]}`;
+			themeLabel.textContent = themeNames[theme];
+			themeIcon.textContent = theme === "dark" ? "☀" : theme === "light" ? "☾" : theme === "spring" ? "✿" : "☂";
+			themeMeta.content = theme === "dark" ? "#101518" : theme === "light" ? "#eff4f6" : theme === "spring" ? "#f6f3eb" : "#18242c";
+			if (persist) {
+				try { localStorage.setItem("portfolio-theme", theme); } catch {}
+			}
+		};
+
+		applyTheme(savedTheme);
+		themeButton.addEventListener("click", () => {
+			const index = themeModes.indexOf(document.documentElement.dataset.theme);
+			applyTheme(themeModes[(index + 1) % themeModes.length], true);
+		});
+
+		const menuButton = document.querySelector(".menu-toggle");
+		const navigation = document.querySelector(".nav-links");
+		menuButton.addEventListener("click", () => {
+			const open = menuButton.getAttribute("aria-expanded") === "true";
+			menuButton.setAttribute("aria-expanded", String(!open));
+			menuButton.setAttribute("aria-label", open ? "Buka menu" : "Tutup menu");
+			navigation.classList.toggle("open", !open);
+		});
+		navigation.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => {
+			navigation.classList.remove("open");
+			menuButton.setAttribute("aria-expanded", "false");
+			menuButton.setAttribute("aria-label", "Buka menu");
+		}));
+
+		const revealItems = document.querySelectorAll(".reveal");
+		if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+			const observer = new IntersectionObserver((entries, activeObserver) => entries.forEach((entry) => {
+				if (entry.isIntersecting) { entry.target.classList.add("visible"); activeObserver.unobserve(entry.target); }
+			}), { threshold: 0.12, rootMargin: "0px 0px -24px 0px" });
+			revealItems.forEach((item) => observer.observe(item));
+		} else revealItems.forEach((item) => item.classList.add("visible"));
+
+
+
+		const scrollProgress = document.querySelector(".scroll-progress");
+		let progressUpdatePending = false;
+		const updateScrollProgress = () => {
+			if (progressUpdatePending) return;
+			progressUpdatePending = true;
+			requestAnimationFrame(() => {
+				const height = document.documentElement.scrollHeight - window.innerHeight;
+				scrollProgress.style.transform = `scaleX(${height > 0 ? window.scrollY / height : 0})`;
+				progressUpdatePending = false;
+			});
+		};
+		window.addEventListener("scroll", updateScrollProgress, { passive: true });
+		window.addEventListener("resize", updateScrollProgress);
+		updateScrollProgress();
+	</script>
+</body>
+</html>
